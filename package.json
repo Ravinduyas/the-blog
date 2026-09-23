@@ -1,0 +1,22 @@
+{
+  "name": "down-south-ceylon",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The Down South Ceylon blog — public site, articles API and editorial admin panel.",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend && npm install --prefix admin",
+    "dev": "concurrently -n api,blog,admin -c magenta,cyan,yellow \"npm:dev:api\" \"npm:dev:blog\" \"npm:dev:admin\"",
+    "dev:api": "npm run dev --prefix backend",
+    "dev:blog": "npm run dev --prefix frontend",
+    "dev:admin": "npm run dev --prefix admin",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend && npm run build --prefix admin",
+    "lint": "npm run lint --prefix backend && npm run lint --prefix frontend && npm run lint --prefix admin",
+    "seed": "npm --prefix backend run seed --",
+    "deploy": "cross-env BASE_PATH=/the-blog/ npm run build --prefix frontend && gh-pages -d frontend/dist -m \"Deploy blog to GitHub Pages\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "cross-env": "^10.1.0",
+    "gh-pages": "^6.3.0"
+  }
+}

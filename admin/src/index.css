@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Same editorial palette as the public blog, so the panel feels like the site. */
+  --color-sand-50: #faf8f5;
+  --color-sand-100: #f5efe9;
+  --color-sand-200: #ebdcd0;
+  --color-sand-300: #d8cbbf;
+  --color-clay-400: #c57d71;
+  --color-clay-500: #9e5d50;
+  --color-ink-900: #1c1c1c;
+  --color-ink-700: #444444;
+  --color-ink-500: #777777;
+}
+
+@layer utilities {
+  .font-serif-display {
+    font-family: 'DM Serif Display', Georgia, serif;
+  }
+  .font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-script {
+    font-family: 'Caveat', cursive;
+  }
+  .font-sans-clean {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-sand-50);
+    color: #2c2c2c;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Matches the blog's scrollbar so the two apps sit together visually. */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5efe9;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8c7be;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bfaaa0;
+}

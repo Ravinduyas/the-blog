@@ -1,0 +1,8 @@
+{
+  "name": "Down South Ceylon - The Blog",
+  "description": "A travel blog for Sri Lanka’s south coast: destination guides for Galle to Tangalle, surf and beaches, whale watching and safari, food and culture, featuring handpicked local Down South partners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
