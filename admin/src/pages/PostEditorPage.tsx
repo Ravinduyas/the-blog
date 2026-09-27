@@ -14,7 +14,7 @@ import {
   Textarea,
   Toggle,
 } from '../components/ui';
-import { StepsEditor, StringListEditor } from '../components/ContentEditors';
+import { FaqEditor, StepsEditor, StringListEditor } from '../components/ContentEditors';
 import { TilePreview } from '../components/TilePreview';
 import type { AdminPost, CardVisualType, CategoryType, PostInput, PostStatus } from '../types';
 
@@ -77,7 +77,7 @@ function blankPost(author: string): PostInput {
     featured: false,
     heroImage: '',
     tileConfig: { bgColor: '#c3c8cf', textColor: '#272d34', headlineText: '' },
-    content: { introduction: [''], steps: [], keyTakeaways: [], conclusion: '' },
+    content: { summary: '', introduction: [''], steps: [], keyTakeaways: [], conclusion: '', faq: [] },
     status: 'draft',
     order: 0,
   };
@@ -98,10 +98,12 @@ function toInput(post: AdminPost): PostInput {
     heroImage: post.heroImage ?? '',
     tileConfig: { ...post.tileConfig },
     content: {
+      summary: post.content?.summary ?? '',
       introduction: post.content?.introduction ?? [],
       steps: post.content?.steps ?? [],
       keyTakeaways: post.content?.keyTakeaways ?? [],
       conclusion: post.content?.conclusion ?? '',
+      faq: post.content?.faq ?? [],
     },
     status: post.status,
     order: post.order ?? 0,
@@ -121,10 +123,14 @@ function clean(input: PostInput): PostInput {
     slug: input.slug?.trim() || undefined,
     tileConfig: tile,
     content: {
+      summary: input.content.summary?.trim() || undefined,
       introduction: input.content.introduction.filter((p) => p.trim()),
       steps: input.content.steps.filter((s) => s.title.trim() || s.description.trim()),
       keyTakeaways: input.content.keyTakeaways.filter((k) => k.trim()),
       conclusion: input.content.conclusion?.trim() || undefined,
+      faq: input.content.faq
+        .map((f) => ({ question: f.question.trim(), answer: f.answer.trim() }))
+        .filter((f) => f.question && f.answer),
     },
   };
 }
@@ -365,9 +371,23 @@ export const PostEditorPage: React.FC = () => {
           </section>
 
           <section className="space-y-4 rounded-xs border border-sand-200 bg-white p-5">
+            <h2 className="font-serif-display text-lg text-ink-900">Quick answer</h2>
+            <p className="text-xs text-ink-500">
+              40-60 words that directly answer the question in the title. It is shown first in the
+              article and used as the page description, so Google and AI answer engines can quote it.
+            </p>
+            <Textarea
+              rows={3}
+              value={form.content.summary ?? ''}
+              onChange={(e) => patchContent({ summary: e.target.value })}
+              placeholder="Blue whales pass Mirissa from November to April. Boats leave the harbour at 06:30..."
+            />
+          </section>
+
+          <section className="space-y-4 rounded-xs border border-sand-200 bg-white p-5">
             <h2 className="font-serif-display text-lg text-ink-900">Introduction</h2>
             <p className="text-xs text-ink-500">
-              One block per paragraph. Inline links use [label](https://example.com) and become
+              One block per paragraph. Inline links use [Hello Rent](https://hellorentsrilanka.com/) and become
               partner backlinks on the site.
             </p>
             <StringListEditor
@@ -405,6 +425,15 @@ export const PostEditorPage: React.FC = () => {
               onChange={(e) => patchContent({ conclusion: e.target.value })}
               placeholder="Five days is the minimum that does not feel rushed."
             />
+          </section>
+
+          <section className="space-y-4 rounded-xs border border-sand-200 bg-white p-5">
+            <h2 className="font-serif-display text-lg text-ink-900">FAQ</h2>
+            <p className="text-xs text-ink-500">
+              Phrase each question the way a traveller would type or say it. Answer it in the first
+              sentence, in two to four sentences total. These become FAQ structured data.
+            </p>
+            <FaqEditor faq={form.content.faq} onChange={(faq) => patchContent({ faq })} />
           </section>
         </div>
 
@@ -514,7 +543,7 @@ export const PostEditorPage: React.FC = () => {
               <Input
                 value={form.tileConfig.partnerName ?? ''}
                 onChange={(e) => patchTile({ partnerName: e.target.value })}
-                placeholder="Mirissa Blue Whale Tours"
+                placeholder="Hello Rent"
               />
             </Field>
           </section>

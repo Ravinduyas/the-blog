@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowDown, ArrowUp, Plus, Trash2 } from 'lucide-react';
 import { Button, Input, Textarea } from './ui';
-import type { PostStep } from '../types';
+import type { PostFaq, PostStep } from '../types';
 
 /* Reordering helper shared by both editors below. */
 function move<T>(items: T[], from: number, to: number): T[] {
@@ -109,7 +109,7 @@ export const StepsEditor: React.FC<{
             <Textarea
               rows={4}
               value={step.description}
-              placeholder="Body copy. Inline links use [label](https://example.com) and become partner backlinks on the site."
+              placeholder="Body copy. Inline links use [The Surfer](https://www.thesurferweligama.com/en) and become partner backlinks on the site."
               onChange={(e) => update(index, { description: e.target.value })}
             />
             <Input
@@ -134,6 +134,55 @@ export const StepsEditor: React.FC<{
       >
         <Plus className="h-3.5 w-3.5" />
         Add section
+      </Button>
+    </div>
+  );
+};
+
+/** Question-and-answer pairs, published as FAQPage structured data. */
+export const FaqEditor: React.FC<{
+  faq: PostFaq[];
+  onChange: (faq: PostFaq[]) => void;
+}> = ({ faq, onChange }) => {
+  const update = (index: number, patch: Partial<PostFaq>) => {
+    const next = [...faq];
+    next[index] = { ...next[index], ...patch };
+    onChange(next);
+  };
+
+  return (
+    <div className="space-y-4">
+      {faq.map((item, index) => (
+        <div key={index} className="flex gap-2">
+          <div className="flex-1 space-y-2 rounded-xs border border-sand-200 bg-white p-3">
+            <Input
+              value={item.question}
+              placeholder="When is whale watching season in Mirissa?"
+              onChange={(e) => update(index, { question: e.target.value })}
+            />
+            <Textarea
+              rows={3}
+              value={item.answer}
+              placeholder="Answer in the first sentence, then add one or two sentences of detail."
+              onChange={(e) => update(index, { answer: e.target.value })}
+            />
+          </div>
+          <RowControls
+            index={index}
+            total={faq.length}
+            onMove={(from, to) => onChange(move(faq, from, to))}
+            onRemove={(i) => onChange(faq.filter((_, n) => n !== i))}
+          />
+        </div>
+      ))}
+
+      <Button
+        type="button"
+        variant="secondary"
+        onClick={() => onChange([...faq, { question: '', answer: '' }])}
+      >
+        <Plus className="h-3.5 w-3.5" />
+        Add question
       </Button>
     </div>
   );

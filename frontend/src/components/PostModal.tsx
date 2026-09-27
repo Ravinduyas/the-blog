@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { BlogPost } from '../types';
-import { X, Clock, Calendar, Bookmark, Share2, Check, Copy, Heart, MessageSquare, Send } from 'lucide-react';
+import { X, Clock, Calendar, Share2, Check, Copy } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { RichText } from './RichText';
+import { PARTNER_LISTINGS } from '../data/partners';
+import { articleUrl } from '../lib/seo';
+
+/** The article every "trip planner" link on the site opens. */
+export const PLANNING_GUIDE_ID = 'how-to-plan-a-trip-down-south';
 
 interface PostModalProps {
   post: BlogPost | null;
@@ -18,25 +23,25 @@ export const PostModal: React.FC<PostModalProps> = ({
   onOpenTraining,
 }) => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [saved, setSaved] = useState(false);
-  const [likes, setLikes] = useState(48);
-  const [hasLiked, setHasLiked] = useState(false);
-  const [comments, setComments] = useState<Array<{ name: string; text: string; date: string }>>([
-    {
-      name: 'Sarah Jenkins',
-      text: 'This was exactly the guide I was hunting for. Took the 06:30 boat on your advice and we had blue whales by eight. Highlight of the trip.',
-      date: '2 days ago',
-    },
-    {
-      name: 'Chloe M.',
-      text: 'Macka, thank you for saying the roadside turtle hatcheries are skippable. We went to Rekawa after dark instead and it was unforgettable.',
-      date: '4 days ago',
-    },
-  ]);
-  const [newCommentName, setNewCommentName] = useState('');
-  const [newCommentText, setNewCommentText] = useState('');
+  const [linkCopied, setLinkCopied] = useState(false);
 
   if (!post) return null;
+
+  // Native share sheet on phones, copy-to-clipboard everywhere else.
+  const handleShare = async () => {
+    const url = articleUrl(post);
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: post.title, url });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    } catch {
+      /* the reader dismissed the share sheet */
+    }
+  };
 
   // Articles that ship a photograph lead with it; the rest keep the coloured
   // typographic banner that matches their card in the grid.
@@ -46,31 +51,6 @@ export const PostModal: React.FC<PostModalProps> = ({
     navigator.clipboard.writeText(code);
     setCopiedCode(code);
     setTimeout(() => setCopiedCode(null), 2000);
-  };
-
-  const handleLike = () => {
-    if (!hasLiked) {
-      setLikes(likes + 1);
-      setHasLiked(true);
-    } else {
-      setLikes(likes - 1);
-      setHasLiked(false);
-    }
-  };
-
-  const handleAddComment = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newCommentName.trim() || !newCommentText.trim()) return;
-    setComments([
-      ...comments,
-      {
-        name: newCommentName.trim(),
-        text: newCommentText.trim(),
-        date: 'Just now',
-      },
-    ]);
-    setNewCommentName('');
-    setNewCommentText('');
   };
 
   return (
@@ -103,16 +83,12 @@ export const PostModal: React.FC<PostModalProps> = ({
 
             <div className="flex items-center gap-3">
               <button
-                onClick={() => setSaved(!saved)}
-                className={`p-2 rounded-full border text-xs flex items-center gap-1.5 transition-colors ${
-                  saved
-                    ? 'bg-[#c57d71] text-white border-[#c57d71]'
-                    : 'bg-white text-[#555] border-[#d8cbbf] hover:text-black'
-                }`}
-                title="Save Article"
+                onClick={handleShare}
+                className="p-2 rounded-full border text-xs flex items-center gap-1.5 transition-colors bg-white text-[#555] border-[#d8cbbf] hover:text-black"
+                title="Share this guide"
               >
-                <Bookmark className="w-4 h-4" />
-                <span className="hidden sm:inline">{saved ? 'Saved' : 'Save'}</span>
+                {linkCopied ? <Check className="w-4 h-4 text-emerald-600" /> : <Share2 className="w-4 h-4" />}
+                <span className="hidden sm:inline">{linkCopied ? 'Copied' : 'Share'}</span>
               </button>
 
               <button
@@ -146,6 +122,18 @@ export const PostModal: React.FC<PostModalProps> = ({
             <h1 className="text-3xl sm:text-4xl font-serif-display text-[#222222] leading-tight font-normal">
               {post.title}
             </h1>
+
+            {/* Quick answer: the direct reply to the title's question, first on the page */}
+            {post.content.summary && (
+              <div className="rounded-xs border border-[#e5dacf] bg-white p-5 sm:p-6">
+                <span className="mb-2 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#c57d71]">
+                  Quick answer
+                </span>
+                <p className="text-base sm:text-[17px] leading-relaxed text-[#2c2c2c]">
+                  <RichText>{post.content.summary}</RichText>
+                </p>
+              </div>
+            )}
 
             {/* Hero Tile Graphic Banner */}
             <div
@@ -272,119 +260,109 @@ export const PostModal: React.FC<PostModalProps> = ({
               </p>
             )}
 
-            {/* Free Training Banner Intermission */}
+            {/* Frequently asked questions, mirrored in FAQPage structured data */}
+            {post.content.faq && post.content.faq.length > 0 && (
+              <section className="space-y-5 border-t border-[#ebdcd0] pt-8" aria-labelledby="faq-heading">
+                <h2 id="faq-heading" className="font-serif-display text-2xl sm:text-3xl text-[#222222] font-normal">
+                  Frequently asked questions
+                </h2>
+                <div className="divide-y divide-[#ebdcd0] border-y border-[#ebdcd0]">
+                  {post.content.faq.map((item, index) => (
+                    <details key={index} className="group py-4" open={index === 0}>
+                      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-base sm:text-lg font-medium text-[#222]">
+                        <h3 className="font-sans-clean">{item.question}</h3>
+                        <span className="mt-1 shrink-0 text-[#c57d71] transition-transform group-open:rotate-45" aria-hidden="true">
+                          +
+                        </span>
+                      </summary>
+                      <p className="mt-3 text-base leading-relaxed text-[#444]">
+                        <RichText>{item.answer}</RichText>
+                      </p>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Partnership disclosure, shown only where an article links out to a partner */}
+            {/[\[][^\]]+\]\(https?:\/\//.test(JSON.stringify(post.content)) && (
+              <p className="text-xs leading-relaxed text-[#888]">
+                Some businesses linked in this article are partners of Down South Ceylon. We only
+                recommend places we know and would send our own friends to.
+              </p>
+            )}
+
+            {/* Book direct with the partners */}
             <div className="bg-[#35393c] text-white p-6 sm:p-8 rounded-xs text-center space-y-4">
               <span className="text-[11px] tracking-[0.2em] uppercase text-[#d6d6d6]">
-                PLANNING YOUR OWN DOWN SOUTH TRIP?
+                PLANNING YOUR OWN SOUTH COAST TRIP?
               </span>
               <h3 className="font-serif-display text-2xl font-normal">
-                Download Our Free Down South Guide
+                Book Direct with Our Weligama &amp; Mirissa Partners
               </h3>
-              <p className="text-sm text-[#ccc] max-w-md mx-auto">
-The south coast planner we use ourselves — seasons, two-base routes, and what to book ahead.
-              </p>
-              <button
-                onClick={() => {
-                  onClose();
-                  onOpenTraining();
-                }}
-                className="bg-[#d28a80] hover:bg-[#c2796f] text-white text-xs font-semibold tracking-widest uppercase px-6 py-3 rounded-full transition-colors cursor-pointer"
-              >
-                GET THE FREE GUIDE
-              </button>
+              <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+                {PARTNER_LISTINGS.map((partner) => (
+                  <a
+                    key={partner.id}
+                    href={partner.website}
+                    target="_blank"
+                    rel="noopener"
+                    className="rounded-full border border-white/25 px-3.5 py-1.5 text-xs text-white hover:bg-white/10 transition-colors"
+                  >
+                    {partner.name}
+                  </a>
+                ))}
+              </div>
+              {post.id !== PLANNING_GUIDE_ID && (
+                <button
+                  onClick={() => {
+                    onClose();
+                    onOpenTraining();
+                  }}
+                  className="bg-[#d28a80] hover:bg-[#c2796f] text-white text-xs font-semibold tracking-widest uppercase px-6 py-3 rounded-full transition-colors cursor-pointer"
+                >
+                  READ THE TRIP PLANNING GUIDE
+                </button>
+              )}
             </div>
 
             {/* Author Signature */}
             <div className="pt-6 border-t border-[#ebdcd0] flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 border border-white shadow-xs">
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
-                  alt="Macka"
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+              {post.author === 'Macka' ? (
+                <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 border border-white shadow-xs">
+                  <img
+                    src={`${import.meta.env.BASE_URL}macka.png`}
+                    alt="Macka"
+                    className="w-full h-full object-cover object-[60%_30%]"
+                  />
+                </div>
+              ) : (
+                <div
+                  className="w-16 h-16 rounded-full shrink-0 bg-[#c57d71] text-white flex items-center justify-center font-serif-display text-2xl shadow-xs"
+                  aria-hidden="true"
+                >
+                  {post.author.charAt(0)}
+                </div>
+              )}
               <div>
                 <span className="font-script text-2xl text-[#222] block font-bold">
-                  written by Macka
+                  written by {post.author}
                 </span>
                 <p className="text-xs text-[#666] leading-relaxed">
-Editor at Down South Ceylon. Writing honest south coast guides and hunting down the small, locally owned operators worth your money.
+Editor at Down South Ceylon, based in Weligama. Writing first-hand guides to Sri Lanka's south coast from Galle to Tangalle, and hunting down the small, locally owned operators worth your money.
                 </p>
               </div>
             </div>
 
-            {/* Like & Share Actions */}
-            <div className="flex items-center justify-between pt-4 border-t border-[#ebdcd0]">
+            {/* Share */}
+            <div className="flex items-center justify-end pt-4 border-t border-[#ebdcd0]">
               <button
-                onClick={handleLike}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-medium transition-all ${
-                  hasLiked
-                    ? 'bg-rose-50 border-rose-300 text-rose-600'
-                    : 'bg-white border-[#d8cbbf] text-[#555] hover:text-black'
-                }`}
+                onClick={handleShare}
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-[#d8cbbf] bg-white text-sm text-[#555] hover:text-black transition-colors cursor-pointer"
               >
-                <Heart className={`w-4 h-4 ${hasLiked ? 'fill-rose-500 text-rose-500' : ''}`} />
-                <span>{likes} Helpful</span>
+                {linkCopied ? <Check className="w-4 h-4 text-emerald-600" /> : <Share2 className="w-4 h-4" />}
+                <span>{linkCopied ? 'Link copied' : 'Share this guide'}</span>
               </button>
-
-              <div className="flex items-center gap-2 text-xs text-[#777]">
-                <Share2 className="w-4 h-4" />
-                <span>Share this guide</span>
-              </div>
-            </div>
-
-            {/* Comments Section */}
-            <div className="pt-8 border-t border-[#ebdcd0] space-y-6">
-              <div className="flex items-center gap-2">
-                <MessageSquare className="w-5 h-5 text-[#c57d71]" />
-                <h4 className="font-serif-display text-xl text-[#222]">
-                  Reader Comments ({comments.length})
-                </h4>
-              </div>
-
-              {/* Comment list */}
-              <div className="space-y-4">
-                {comments.map((c, i) => (
-                  <div key={i} className="bg-white p-4 rounded-xs border border-[#ebdcd0] space-y-1.5">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="font-semibold text-[#333]">{c.name}</span>
-                      <span className="text-[#888]">{c.date}</span>
-                    </div>
-                    <p className="text-sm text-[#444] leading-relaxed">{c.text}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Add Comment Form */}
-              <form onSubmit={handleAddComment} className="bg-[#f3ece4] p-5 rounded-xs space-y-3">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#666]">
-                  Leave a reply
-                </span>
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  value={newCommentName}
-                  onChange={(e) => setNewCommentName(e.target.value)}
-                  className="w-full bg-white text-sm px-3.5 py-2 rounded-xs border border-[#d8cbbf] focus:outline-none focus:border-[#a88d7f]"
-                  required
-                />
-                <textarea
-                  placeholder="Write your thought or question here..."
-                  value={newCommentText}
-                  onChange={(e) => setNewCommentText(e.target.value)}
-                  rows={3}
-                  className="w-full bg-white text-sm px-3.5 py-2 rounded-xs border border-[#d8cbbf] focus:outline-none focus:border-[#a88d7f]"
-                  required
-                ></textarea>
-                <button
-                  type="submit"
-                  className="bg-[#292929] hover:bg-black text-white text-xs font-semibold tracking-wider uppercase px-5 py-2.5 rounded-xs transition-colors flex items-center gap-2 cursor-pointer"
-                >
-                  <Send className="w-3.5 h-3.5" />
-                  Post Comment
-                </button>
-              </form>
             </div>
           </div>
         </motion.div>

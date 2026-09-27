@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * Renders article body copy, turning inline [label](https://example.com) markup
+ * Renders article body copy, turning inline [The Surfer](https://www.thesurferweligama.com/en) markup
  * into real anchors. This is how partner businesses earn their in-context
  * backlinks from within an article — links are followed (no rel="nofollow").
  */

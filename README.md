@@ -46,8 +46,9 @@ seeded article back to the original text.
 
 1. **Articles → New article.**
 2. Fill in the title, category, excerpt and body sections. Inline links use
-   `[label](https://example.com)` and render as real links on the site — this is
-   how partner businesses earn their backlink.
+   `[Hello Rent](https://hellorentsrilanka.com/)` and render as real links on the
+   site — this is how partner businesses earn their backlink. The partners are
+   listed in `frontend/src/data/partners.ts`.
 3. Pick a **visual type** in Card design. Two of the five frame a photograph
    inside the tile (`destination split`, `laptop mockup`, from the *Tile image*
    field); the other three are typographic tiles that use the article's **Hero

@@ -11,80 +11,96 @@ import { BlogPost } from '../types';
  * hosted on Unsplash and licensed for free use.
  */
 export const BLOG_POSTS: BlogPost[] = [
-  // 1
+  // 0
   {
-    id: 'blue-whales-off-mirissa',
-    title: 'Blue Whales off Mirissa: What a Dawn Boat Trip Is Really Like',
-    category: 'Wildlife & Safari',
-    date: 'August 14, 2026',
-    readTime: '6 min read',
+    id: 'partner-spotlight-hello-rent-weligama',
+    title: 'NEW PARTNER! - Hello Rent: Scooter, Tuk-Tuk & Car Rental in Weligama',
+    category: 'Partner Spotlights',
+    date: 'September 20, 2026',
+    readTime: '4 min read',
     author: 'Macka',
-    excerpt: 'Hour by hour out of Mirissa harbour — the 6am start, the seasickness nobody warns you about, and whether you actually see a blue whale.',
-    visualType: 'destination-split',
+    excerpt: 'Scooters from €5 a day, tuk-tuks and air-conditioned cars in Weligama, delivered to your hotel or the airport, with the Sri Lankan driving permit arranged for you.',
+    visualType: 'laptop-mockup',
     tileConfig: {
-      bgColor: '#e3dcd1',
-      textColor: '#222222',
-      topLabel: 'wildlife encounter',
-      headlineText: 'Blue Whales off Mirissa',
-      partnerName: 'Mirissa Blue Whale Tours',
-      mockupImage: 'https://images.unsplash.com/photo-1772738358893-b9884e7b5712?auto=format&fit=crop&w=800&q=80',
+      bgColor: '#9aa7b3',
+      textColor: '#ffffff',
+      badgeText: 'NEW!',
+      badgeColor: '#1c1c1c',
+      headlineText: 'Hello Rent',
+      scriptSubtitle: 'Weligama, Sri Lanka',
+      mockupImage: 'https://images.unsplash.com/photo-1744298350844-e628a07e8175?auto=format&fit=crop&w=800&q=80',
     },
     content: {
+      summary: 'Hello Rent is a vehicle rental shop on the main road through Weligama, open daily 07:00-21:00. It rents automatic scooters from about €5 a day, manual motorbikes, tuk-tuks and air-conditioned cars, with a helmet on every bike and delivery to your hotel or the airport. It also arranges the six-month Sri Lankan driving permit you need to ride legally.',
       introduction: [
-        'Mirissa sits closer to deep water than almost anywhere else in Sri Lanka. A few kilometres past Dondra Head the continental shelf drops away, and the blue whales that move between the Arabian Sea and the Bay of Bengal pass along that edge, close enough that a fishing town of a few thousand people has become one of the most reliable places on earth to see the largest animal that has ever lived.',
-        'It also means a lot of boats leave that harbour at dawn, and they are not all run the same way. We went out with [Mirissa Blue Whale Tours](https://mirissabluewhale.lk) to describe the morning honestly — the parts that are wonderful, the parts that are uncomfortable, and the parts the brochures leave out entirely.'
+        'The single most useful thing you can do on the south coast is get your own wheels, and the single most common mistake is doing it without the right paperwork. [Hello Rent](https://hellorentsrilanka.com/) in Weligama is the rental shop we point readers to, because it handles both halves: a well-kept fleet, and the permit that makes riding it legal.',
+        'From Weligama, the middle of the south coast, a scooter puts Mirissa, Ahangama, Midigama, Hiriketiya and Galle all within an easy ride.'
       ],
       steps: [
         {
-          title: '05:45 — The Alarm',
-          description: 'Boats leave between 06:30 and 07:00, and the harbour is a ten-minute tuk-tuk from anywhere in Mirissa, so you are up before the sun. Eat something small and plain. Take your seasickness tablet now, not on the boat — they need an hour to work, and by the time you feel ill it is too late for them to help.',
-          tip: 'If you are staying in Weligama or Ahangama, book a tuk-tuk the night before. Drivers are thin on the ground at 05:45 and the PickMe app is unreliable at that hour.'
+          title: 'The Fleet',
+          description: 'Hello Rent keeps four kinds of vehicle, and the right one depends on what you are doing:\n\n• Automatic scooters from about €5 a day, for the coast road and the surf run\n• Manual motorbikes, up to a Bajaj Pulsar 160, for mountain roads and long days\n• A Bajaj 4-stroke tuk-tuk, three seats and 60-80 litres of luggage space\n• Air-conditioned cars and vans for families, longer trips and the airport run\n\nEvery bike comes with a helmet, and extras like a phone mount can be added to the booking.'
         },
         {
-          title: '06:15 — The Harbour Before Light',
-          description: 'Mirissa Fisheries Harbour smells of diesel, fish and strong tea. Twenty or thirty boats are boarding at once, from two-deck tourist vessels holding sixty people down to converted fishing boats carrying a dozen. It looks chaotic, and it is, but the fleet leaving together matters later: once anyone finds whales the sighting is shared by radio, so a big fleet is, oddly, in your favour.\n\nYou will be given a life jacket and shown a seat. Go for the upper deck if there is one and sit towards the middle of the boat, where the movement is smallest. The front looks exciting and is where people are sick.'
+          title: 'Which Scooter Fits You',
+          description: 'The four automatics differ in the way that actually matters to a rider: height, knee room and storage. The Honda Navi 110 suits petite and short riders. The Honda Dio 110 is the trusted commuter for petite to average riders, with 18 litres under the seat. The Yamaha Ray ZR fits petite to tall riders with 21 litres. The TVS Ntorq 125 is the strongest automatic, for average to tall riders and long days, with 22 litres. Just staying around Weligama? Any of them will do.'
         },
         {
-          title: '07:00 — Leaving the Headland',
-          description: 'For the first half hour the water is sheltered and the coast slides past: Coconut Tree Hill, the lighthouse at Dondra, the stilt-fishing platforms. Then the boat clears the headland and meets the open Indian Ocean swell, and everyone understands why the tablet mattered. It is not usually rough, but it is a long, slow roll that a lot of people have never felt before.\n\nThis is the stretch where the crew hands round breakfast — a sandwich, a banana, tea from a flask. Eat it if you can. An empty stomach is worse than a full one.'
+          title: 'Do You Need a Permit to Ride in Sri Lanka?',
+          description: 'Yes. Your home licence alone is not enough, and an International Driving Permit alone is not enough either. To ride or drive legally you need a Sri Lankan permit endorsed on top of your International Driving Permit, and the right vehicle category must already be on your home licence. Without it, most travel insurance will refuse a claim for any accident.\n\nThere are three ways to get it:\n\n• At Colombo (Katunayake) airport when you land — the easiest and cheapest, valid one month\n• At the Department of Motor Traffic in Colombo or Hambantota — inexpensive, but costs a day of travel, valid one month\n• Arranged by Hello Rent through the Automobile Association — you send documents and stay at the beach, valid six months\n\nYou need the government-issued IDP booklet from your own country (IDPs bought from online agencies are not accepted), a copy of your passport photo page, and a passport-style photo.'
         },
         {
-          title: '07:30 — An Hour of Nothing, Then Spinner Dolphins',
-          description: 'The middle of the trip is open water and patience. The boat heads out towards the shipping lane where the shelf drops, and the crew and the marine guide scan the horizon for a blow. Most mornings the first thing you see is not a whale at all but spinner dolphins, sometimes a pod of a few hundred, leaping clear of the water and riding the bow wave for a while before losing interest. It is worth the trip on its own.\n\nA good guide uses this hour. Ours explained how blue whales feed, why they come to this coast, and how to read a blow at distance — a tall, straight column for a blue, a short angled puff for a sperm whale.'
+          title: 'Delivery and Day Trips',
+          description: 'Pick up from the shop on the main road through Weligama, or ask for the vehicle to be delivered to your hotel, the airport or somewhere else on the coast. Booking and questions go through WhatsApp, which is where the shop actually answers.\n\nWeligama sits in the middle of the south coast, so a full day reaches a lot: Hiriketiya bay an easy morning ride east, Unawatuna and Galle Fort the classic ride west, Tangalle further east, and quiet rainforest inland from Galle. If you are staying at [Mellow Bay Living](https://mellowbayliving.com/) or at a surf camp like [The Surfer](https://www.thesurferweligama.com/en), a scooter turns a week on one bay into a week on the whole coast.'
         },
         {
-          title: '08:30 — The Blow',
-          description: 'A blue whale exhale is visible from a long way off — a column of mist nine or ten metres high that hangs in the air for a moment. The boat slows and turns towards it, and then you wait, because a blue whale surfaces for a few breaths and then dives for ten or fifteen minutes.\n\nWhat surprises people is how little of the animal you actually see. There is the blow, then a long, slow, mottled grey-blue back that seems to go on for an impossible time, then a small dorsal fin, then — if you are lucky, and on perhaps half of sightings — a raised tail fluke as it dives. That is it. It is quieter and stranger than you expect. Nobody cheers. Most people just go silent.'
+          title: 'Ride Safely',
+          description: 'Wear the helmet, always. Stay on the back roads rather than the A2 coast road where you can, keep off the road after dark, and never ride after a night out — take a tuk-tuk home from the Saturday boat party in Mirissa. If you have never ridden a scooter before, the south coast is not the place to learn; rent a tuk-tuk or a car instead.'
         },
         {
-          title: 'The Rules, and Why They Matter',
-          description: 'Sri Lanka’s whale-watching guidelines ask boats to stay at least a hundred metres from a whale, approach from the side and behind rather than head-on, and never position a boat in the animal’s path. Not every operator follows this. On a busy morning you will see boats racing each other to a sighting and cutting across a whale’s line, and the animal responds by diving early and staying down longer, which is worse for everyone.\n\nThe operator we recommend keeps its distance, waits for the whale to come up on its own terms, and does not chase. The sightings are just as good — better, usually, because a whale that is not being harassed tends to hang around.'
-        },
-        {
-          title: '10:30 — The Ride Home',
-          description: 'Once the boat has spent time with a whale, or once the morning is clearly not going to produce one, it turns for the harbour. The swell is behind you now and the ride is gentler. Most trips are back between 10:30 and 11:30, though a distant sighting can stretch it past noon. Plan nothing for the afternoon. You will be sunburnt, salt-crusted and quietly tired, and a hammock is the correct response.'
-        },
-        {
-          title: 'Details Worth Copying Down',
-          description: 'The things you will want on your phone the night before:',
-          codeSnippet: `Departure: Mirissa Fisheries Harbour, Mirissa 81740
-Boarding: 06:15 for a 06:30 departure
-Season: November to April (best December to April)
-Also seen: sperm whales, Bryde's whales, spinner dolphins, occasional orcas
-Bring: seasickness tablet (take it 1 hr before), hat, sunscreen, dry layer, water
-Wear: something you do not mind getting wet; leave the camera drybag open
-Duration: 3-5 hours, sometimes longer if the whales are far out
-Price: roughly USD 40-60 per person, breakfast usually included
-Rebook: ask before paying whether a no-sighting trip earns a free second go`
+          title: 'Quick Reference',
+          description: 'For your notes:',
+          codeSnippet: `Shop: Hello Rent, main road, Weligama, Southern Province
+Hours: Monday to Sunday, 07:00 - 21:00
+Contact: WhatsApp +94 76 707 3388
+Fleet: automatic scooters (from about EUR 5/day), manual motorbikes,
+       tuk-tuks, air-conditioned cars and vans
+Included: helmet with every bike
+Delivery: hotel, airport or elsewhere on request
+Permit: arranged via the Automobile Association, valid 6 months
+Bring: home licence, government-issued IDP booklet,
+       passport copy, passport photo
+Book: hellorentsrilanka.com`
         }
       ],
       keyTakeaways: [
-        'Take a seasickness tablet an hour before boarding even if you never get seasick — the swell past the headland is real.',
-        'Choose an operator that keeps its distance rather than one that races other boats to a sighting.',
-        'Sightings are never guaranteed. Ask about the rebook policy before you pay.',
-        'Blue whales are here November to April. From June to September the whales are off Trincomalee on the east coast instead.'
+        'You need a Sri Lankan permit on top of your International Driving Permit to ride legally.',
+        'The airport permit is cheapest but lasts a month; the six-month permit arranged by Hello Rent saves a renewal trip.',
+        'Match the scooter to your height, not its looks.'
       ],
-      conclusion: 'A whale trip out of Mirissa is one of the few genuinely bucket-list mornings on this coast, and it is also three hours on a rolling boat that starts before dawn. Go in with the tablet taken, the expectations calibrated and an operator that respects the animals, and it will be the morning you talk about for years.'
+      conclusion: 'A scooter is the difference between seeing one bay and seeing the south coast. Rent it from someone who hands you a helmet, sorts the permit, and answers WhatsApp at 07:00, and the whole coast opens up.',
+      faq: [
+        {
+          question: 'Do I need a licence to rent a scooter in Sri Lanka?',
+          answer: 'Yes. You need your home licence with the motorcycle category, a government-issued International Driving Permit, and a Sri Lankan permit endorsed on top of it. Hello Rent in Weligama can arrange the Sri Lankan permit for you, valid for six months.'
+        },
+        {
+          question: 'How much does it cost to rent a scooter in Weligama?',
+          answer: 'Automatic scooters at Hello Rent in Weligama start from about €5 a day, with a helmet included. Manual motorbikes, tuk-tuks and air-conditioned cars are also available.'
+        },
+        {
+          question: 'Where can I get a Sri Lankan driving permit?',
+          answer: 'You can get it at Colombo Katunayake airport on arrival or at the Department of Motor Traffic in Colombo or Hambantota, both valid one month. Alternatively, a rental company such as Hello Rent can arrange a six-month permit through the Automobile Association.'
+        },
+        {
+          question: 'Can I rent a tuk-tuk and drive it myself in Sri Lanka?',
+          answer: 'Yes, tourists can rent a tuk-tuk, but you need the right licence category and the Sri Lankan permit. Ask the rental company which category your licence needs before you book.'
+        },
+        {
+          question: 'Can a rental scooter be delivered to my hotel in Weligama?',
+          answer: 'Yes. Hello Rent delivers scooters, tuk-tuks and cars to hotels, the airport or other locations on request, and takes bookings over WhatsApp.'
+        }
+      ]
     }
   },
 
@@ -107,6 +123,7 @@ Rebook: ask before paying whether a no-sighting trip earns a free second go`
       buttonText: 'READ THE GUIDE',
     },
     content: {
+      summary: 'The best things to do on Sri Lanka’s south coast are walking the Galle Fort ramparts at sunset, blue whale watching from Mirissa (November to April), learning to surf in Weligama, a dawn safari in Yala or an afternoon in Udawalawe, eating rice and curry at lunch, and swimming at reef-sheltered Dalawella. Five days covers the highlights from two bases.',
       introduction: [
         'Down South is the stretch of coast from Galle to roughly Tangalle — about ninety minutes of driving that somehow holds Dutch ramparts, blue whales, leopards, surf breaks for every level, and some of the best food in the country.',
         'This guide is ordered the way we would actually spend time here, west to east, with honest notes on which famous stops repay the effort and which are simply famous. Fifteen is a lot; nobody needs all of them. Pick the six or seven that sound like you and leave the rest for a second trip.'
@@ -118,11 +135,11 @@ Rebook: ask before paying whether a no-sighting trip earns a free second go`
         },
         {
           title: '2. Go Out for Blue Whales from Mirissa',
-          description: 'Between November and April this is the one splurge we recommend without hesitation. The continental shelf runs close to shore here and blue whales pass along its edge, so a three-hour boat from Mirissa harbour has a genuinely good chance of putting you beside the largest animal that has ever lived. We wrote a full hour-by-hour account of a dawn trip with [Mirissa Blue Whale Tours](https://mirissabluewhale.lk), including the seasickness advice everyone ignores.'
+          description: 'Between November and April this is the one splurge we recommend without hesitation. The continental shelf runs close to shore here and blue whales pass along its edge, so a three-hour boat from Mirissa harbour has a genuinely good chance of putting you beside the largest animal that has ever lived. Boats leave the harbour at about 06:30; take a seasickness tablet an hour before, and choose an operator that keeps its distance from the whales. If you would rather see Mirissa’s coastline at sunset with music, [the Saturday boat party from Mirissa harbour](https://boatpartymirissa.com/) is the evening alternative.'
         },
         {
           title: '3. Learn to Surf at Weligama, Then Graduate to Hiriketiya',
-          description: 'Weligama Bay is a wide, sand-bottomed, forgiving beach break made for first lessons, with surf schools lined up along the sand and boards for a few dollars a day. Two lessons will get most people standing. Once you can, Hiriketiya’s mellow left, forty minutes east, is the friendliest next step on the coast.'
+          description: 'Weligama Bay is a wide, sand-bottomed, forgiving beach break made for first lessons, with surf schools lined up along the sand and boards for a few dollars a day. Two lessons will get most people standing. If you want coaching, a room and a crew in one booking, [The Surfer](https://www.thesurferweligama.com/en) runs locally owned camps on the bay with ISA-certified coaches and no more than four students each. Once you can stand, Hiriketiya’s mellow left, forty minutes east, is the friendliest next step on the coast.'
         },
         {
           title: '4. Take a Dawn Jeep into Yala',
@@ -130,7 +147,7 @@ Rebook: ask before paying whether a no-sighting trip earns a free second go`
         },
         {
           title: '5. Eat Rice and Curry Properly, at Least Once',
-          description: 'Not a curry — a dozen small dishes around a mound of rice, each doing something different: a dhal, a coconut sambol, a jackfruit curry, something sour with fish, something sweet with pumpkin. It is a lunchtime thing, eaten in busy local places rather than hotels. A guided walk with [Galle Fort Food Walks](https://gallefortfoodwalks.lk) on your first evening teaches you what to point at for the rest of the trip.'
+          description: 'Not a curry — a dozen small dishes around a mound of rice, each doing something different: a dhal, a coconut sambol, a jackfruit curry, something sour with fish, something sweet with pumpkin. It is a lunchtime thing, eaten in busy local places rather than hotels. A guided food walk in Galle Fort on your first evening teaches you what to point at for the rest of the trip.'
         },
         {
           title: '6. Swim at Dalawella, Not Unawatuna',
@@ -146,7 +163,8 @@ Rebook: ask before paying whether a no-sighting trip earns a free second go`
         },
         {
           title: '9. Visit a Tea Estate Without Going to the Hills',
-          description: 'Handunugoda, twenty minutes inland from Ahangama, is a working low-country estate that grows the rare “virgin white tea” picked by hand with scissors and never touched by skin. The tour is free, the tasting is generous, and the walk through cinnamon and rubber to the old planter’s bungalow is a proper afternoon. It is a good answer to the question of whether you need to leave the coast for tea.'
+          description: 'Handunugoda, twenty minutes inland from Ahangama, is a working low-country estate that grows the rare “virgin white tea” picked by hand with scissors and never touched by skin. The tour is free, the tasting is generous, and the walk through cinnamon and rubber to the old planter’s bungalow is a proper afternoon. It is a good answer to the question of whether you need to leave the coast for tea.',
+          tip: 'The inland lanes to Handunugoda are quiet and lovely by scooter. [Hello Rent](https://hellorentsrilanka.com/) in Weligama rents automatic scooters with a helmet and can arrange the Sri Lankan permit you need to ride legally.'
         },
         {
           title: '10. Climb Coconut Tree Hill and Parrot Rock at Mirissa',
@@ -166,7 +184,7 @@ Rebook: ask before paying whether a no-sighting trip earns a free second go`
         },
         {
           title: '14. Take the Afternoon Drive at Udawalawe',
-          description: 'If you have one safari in you and what you actually want is to watch large animals behave normally, skip the Yala queue and head ninety minutes north to Udawalawe. The park is open grassland around a reservoir and elephants are almost guaranteed, in herds, in the open, at distance. We wrote a full guide to the afternoon drive with [Yala Leopard Safaris](https://yalaleopardsafaris.lk), who run both parks.'
+          description: 'If you have one safari in you and what you actually want is to watch large animals behave normally, skip the Yala queue and head ninety minutes north to Udawalawe. The park is open grassland around a reservoir and elephants are almost guaranteed, in herds, in the open, at distance. We wrote a full guide to the afternoon drive and how to choose between the two parks.'
         },
         {
           title: '15. Spend a Day in the Rainforest at Sinharaja',
@@ -191,7 +209,25 @@ Season: December to April (southwest monsoon May to September)`
         'December to April is the dry season here. May to September belongs to the east coast instead.',
         'The famous stops that disappoint are the ones built for photographs. The ones that deliver are the ones that were there first.'
       ],
-      conclusion: 'You will not do all fifteen, and you should not try. The south coast rewards people who pick a base, walk to breakfast, and let one good thing happen each day. Everything on this list will still be here next time.'
+      conclusion: 'You will not do all fifteen, and you should not try. The south coast rewards people who pick a base, walk to breakfast, and let one good thing happen each day. Everything on this list will still be here next time.',
+      faq: [
+        {
+          question: 'What is the best time to visit the south coast of Sri Lanka?',
+          answer: 'December to April is the best time to visit the south coast: dry weather, calm seas, whale season and clean morning surf. May to September brings the southwest monsoon, when the east coast around Arugam Bay and Trincomalee is the better choice.'
+        },
+        {
+          question: 'How many days do you need on Sri Lanka’s south coast?',
+          answer: 'Five days is enough for Galle Fort, a beach, a whale boat and one safari without rushing. Ten days adds Hiriketiya, a rainforest day at Sinharaja and slower afternoons; two weeks lets you settle in one bay.'
+        },
+        {
+          question: 'Where should I stay on the south coast of Sri Lanka?',
+          answer: 'Split your stay between two bases: Galle for history and food, then Weligama, Ahangama or Mirissa for surf, whales and beaches. Hiriketiya suits slow days, and Tangalle or Tissamaharama puts you close to the national parks.'
+        },
+        {
+          question: 'Which is better for a safari, Yala or Udawalawe?',
+          answer: 'Choose Yala if seeing a leopard is the priority and you can accept crowds at the gate. Choose Udawalawe if you want near-guaranteed elephant herds, fewer jeeps and an easy afternoon drive.'
+        }
+      ]
     }
   },
 
@@ -201,7 +237,7 @@ Season: December to April (southwest monsoon May to September)`
     title: 'Where to Surf Down South: Weligama to Hiriketiya, Beginner to Barrel',
     category: 'Surf & Beaches',
     date: 'August 05, 2026',
-    readTime: '6 min read',
+    readTime: '7 min read',
     author: 'Macka',
     excerpt: 'An honest break-by-break guide to the south coast — which sand is forgiving, which reef is not, and where to go on your third day.',
     visualType: 'quote-minimal',
@@ -213,6 +249,7 @@ Season: December to April (southwest monsoon May to September)`
       buttonText: 'READ THE GUIDE',
     },
     content: {
+      summary: 'Beginners should surf Weligama Bay, a slow sand-bottom beach break with surf schools along the sand. Improvers move to Hiriketiya’s mellow left or Kabalana. Intermediates suit Kabalana’s The Rock, Lazy Left at Midigama and the Ahangama reefs. Ram’s Right at Midigama is advanced only. The season runs November to April, cleanest at dawn.',
       introduction: [
         'The south coast is one of the gentlest places in the world to learn to surf, and it also has a handful of shallow reef breaks that will happily hold you under. Knowing which is which is the entire trick, and it is not always obvious from the beach.',
         'Here are the breaks in order of how forgiving they are, running from your very first lesson to the day you stop needing one. All of them are within an hour of each other along the coast road, so you can move up the list as the week goes on.'
@@ -220,12 +257,12 @@ Season: December to April (southwest monsoon May to September)`
       steps: [
         {
           title: 'Weligama Bay — Your First Ever Wave',
-          description: 'A wide, two-kilometre sand-bottom bay with waves that crumble rather than break. It is busy, the line-up is mostly other beginners on soft-tops, and the surf schools are lined up along the sand — which is exactly what you want on day one. Waves are small and slow, the water is warm, and there is nothing underneath you but sand.\n\nThe bay works at almost every tide and picks up swell even when the reefs are flat. The trade-off is wind: by ten in the morning it is usually onshore and messy, so early is everything.',
+          description: 'A wide, two-kilometre sand-bottom bay with waves that crumble rather than break. It is busy, the line-up is mostly other beginners on soft-tops, and the surf schools are lined up along the sand — which is exactly what you want on day one. Waves are small and slow, the water is warm, and there is nothing underneath you but sand.\n\nThe bay works at almost every tide and picks up swell even when the reefs are flat. The trade-off is wind: by ten in the morning it is usually onshore and messy, so early is everything.\n\nWeligama is also the easiest place on the coast to base a surf week, because the camps are right on the bay. [The Surfer](https://www.thesurferweligama.com/en) is the locally owned one we point people to: three camps, ISA-certified coaches with a maximum of four students each, video analysis and boards included. Its boutique sister, [Soul Surfer Camp](https://soulsurfercamp.com/), sits twenty seconds from the sand in Paranakade with a rooftop pool and daily yoga.',
           tip: 'The eastern end of the bay, near the island, is slightly cleaner and less crowded than the stretch directly in front of the main road.'
         },
         {
           title: 'Hiriketiya — The Friendly Left',
-          description: 'A small horseshoe bay near Dikwella, forty minutes east of Weligama, that has become the most talked-about surf spot on the coast. There are two waves: a mellow left that peels off the rocks at the western end and runs a long way across the bay, and a punchier beach break in the middle that gets steep at higher tide. The left is where beginners graduate to; the middle is for people who know what they are doing.\n\nThe bay is small and it gets crowded by mid-morning. We stay at [Hiriketiya Surf House](https://hiriketiyasurfhouse.lk), two minutes from the sand, when we want dawn sessions without a drive.'
+          description: 'A small horseshoe bay near Dikwella, forty minutes east of Weligama, that has become the most talked-about surf spot on the coast. There are two waves: a mellow left that peels off the rocks at the western end and runs a long way across the bay, and a punchier beach break in the middle that gets steep at higher tide. The left is where beginners graduate to; the middle is for people who know what they are doing.\n\nThe bay is small and it gets crowded by mid-morning. Stay within walking distance of the sand if you can, so the dawn session does not start with a drive.'
         },
         {
           title: 'Kabalana (The Rock) — The Step Up',
@@ -250,6 +287,10 @@ Season: December to April (southwest monsoon May to September)`
         {
           title: 'Talalla and Dikwella — Beach Breaks with Room',
           description: 'If Hiriketiya is heaving, Talalla’s long crescent bay to the west has a beach break with space, and Dikwella’s main beach has a similar setup. Neither is a world-class wave; both are good places to put in hours without fighting for a peak.'
+        },
+        {
+          title: 'Getting Between the Breaks',
+          description: 'Every break on this list sits on the same coast road, and the best way to chase conditions is on two wheels. From Weligama, Midigama is ten minutes by scooter, Ahangama fifteen and Mirissa twenty. [Hello Rent](https://hellorentsrilanka.com/) on the main road through Weligama rents automatic scooters by the day with a helmet included, and arranges the Sri Lankan driving permit so your travel insurance still holds. Carry the board under your arm on a scooter only if you are a confident rider; otherwise a tuk-tuk with a roof rack costs little.'
         },
         {
           title: 'The Break-by-Break Cheat Sheet',
@@ -285,7 +326,29 @@ Reef: booties, small day first, never at low tide on a big swell.`
         'Reef breaks demand booties and humility. Coral cuts here get infected fast in the heat; clean them with fresh water and iodine the same day.',
         'Line-up etiquette is the same as everywhere: closest to the peak has priority, do not drop in, and apologise when you get it wrong.'
       ],
-      conclusion: 'The beauty of this stretch is that a beginner and an expert can stay in the same guesthouse and both have the best week of their year. Start at Weligama, let the coast pull you east, and know the name of the reef before you paddle out over it.'
+      conclusion: 'The beauty of this stretch is that a beginner and an expert can stay in the same guesthouse and both have the best week of their year. Start at Weligama, let the coast pull you east, and know the name of the reef before you paddle out over it.',
+      faq: [
+        {
+          question: 'Where is the best place for beginners to surf in Sri Lanka?',
+          answer: 'Weligama Bay is the best place for beginners in Sri Lanka. It is a wide sand-bottom beach break with slow, crumbling waves, warm water and surf schools all along the beach, so there is nothing sharp underneath you.'
+        },
+        {
+          question: 'When is surf season on Sri Lanka’s south coast?',
+          answer: 'Surf season on the south coast runs from November to April, with December to March the most consistent. Mornings are cleanest; by mid-morning the wind usually turns onshore.'
+        },
+        {
+          question: 'Do I need a wetsuit to surf in Weligama?',
+          answer: 'No. The water is around 28°C all year, so a rash vest or long-sleeved lycra for sun protection is all you need. Reef booties are worth packing for the reef breaks at Midigama.'
+        },
+        {
+          question: 'Is Hiriketiya good for beginners?',
+          answer: 'Hiriketiya suits beginners who can already stand up. The long mellow left at the western end is a great second step after Weligama, while the steeper beach break in the middle of the bay is for experienced surfers.'
+        },
+        {
+          question: 'Which surf breaks in Sri Lanka are only for advanced surfers?',
+          answer: 'Ram’s Right at Midigama is advanced only: fast, hollow and shallow over sharp coral. The Mirissa point and the middle peak at Hiriketiya on a big day also need solid experience.'
+        }
+      ]
     }
   },
 
@@ -307,6 +370,7 @@ Reef: booties, small day first, never at low tide on a big swell.`
       headlineText: 'how to pick the right south coast beach (swimming, surfing or sunsets)',
     },
     content: {
+      summary: 'For safe swimming on Sri Lanka’s south coast, choose a reef-sheltered bay such as Dalawella, Polhena, Jungle Beach or the western corner of Hiriketiya. For surfing, use open beach breaks like Weligama. For sunsets, go west-facing: Galle Fort, Ahangama or Coconut Tree Hill. Swim in the morning and avoid open beaches from May to September.',
       introduction: [
         'The south coast has beaches that look identical in photographs and behave completely differently in the water. Some are lagoons you could nap in. Others have rip currents that have killed strong swimmers, and there is usually no flag, no lifeguard and no sign to tell you which is which.',
         'Here is how to tell them apart before you are standing on the sand in your swimsuit, followed by an honest list of which beach to use for what.'
@@ -330,7 +394,7 @@ Reef: booties, small day first, never at low tide on a big swell.`
         },
         {
           title: '5. Ask Someone Who Went In First',
-          description: 'A handful of the busiest tourist beaches post a lifeguard in high season; most Down South beaches have nobody. The surf school on the sand, the guy renting sunbeds and the woman running the beach café all know exactly where today’s current is running, and they will tell you for free if you ask. An empty beach on a hot afternoon is a question, not a discovery.'
+          description: 'A handful of the busiest tourist beaches post a lifeguard in high season; most Down South beaches have nobody. The surf school on the sand, the guy renting sunbeds and the woman running the beach café all know exactly where today’s current is running, and they will tell you for free if you ask. On Weligama Bay, the coaches at camps like [The Surfer](https://www.thesurferweligama.com/en) are in the water every morning and know exactly where the channels are that day. An empty beach on a hot afternoon is a question, not a discovery.'
         },
         {
           title: '6. The Small Hazards Nobody Mentions',
@@ -370,7 +434,25 @@ DO NOT SWIM
         'If the beach is empty on a hot afternoon, ask why before assuming you found a secret.',
         'Caught in a rip: float, wave, swim sideways. Never straight back to shore against it.'
       ],
-      conclusion: 'None of this is meant to put you off the water. The south coast is one of the loveliest places anywhere to swim, and a reef lagoon at eight in the morning is as safe as a pool. It just asks you to look at the sea for thirty seconds before you run into it.'
+      conclusion: 'None of this is meant to put you off the water. The south coast is one of the loveliest places anywhere to swim, and a reef lagoon at eight in the morning is as safe as a pool. It just asks you to look at the sea for thirty seconds before you run into it.',
+      faq: [
+        {
+          question: 'Which beaches on Sri Lanka’s south coast are safe for swimming?',
+          answer: 'The safest swimming beaches are the reef-sheltered ones: Dalawella (Wijaya Beach), Polhena near Matara, Jungle Beach near Unawatuna and the western corner of Hiriketiya. The reef breaks the waves offshore, leaving calm, shallow water inside.'
+        },
+        {
+          question: 'How do you spot a rip current?',
+          answer: 'A rip looks like a strip of flatter, darker or discoloured water running out through the breaking waves, often with foam drifting seaward. If caught, float, raise an arm and swim parallel to the beach until you are out of it.'
+        },
+        {
+          question: 'Is it safe to swim in Sri Lanka in the monsoon?',
+          answer: 'From May to September the southwest monsoon makes open south coast beaches dangerous. Stick to reef-sheltered lagoons and ask locals every day before getting in.'
+        },
+        {
+          question: 'Where is the best sunset on Sri Lanka’s south coast?',
+          answer: 'The best sunsets are from west-facing spots: the Galle Fort ramparts, the beaches around Ahangama, Coconut Tree Hill in Mirissa and Silent Beach in Tangalle. From Mirissa you can also watch it from the water on a sunset boat.'
+        }
+      ]
     }
   },
 
@@ -391,6 +473,7 @@ DO NOT SWIM
       headlineText: 'how to spend: 5 perfect days between galle and tangalle',
     },
     content: {
+      summary: 'A good five-day south coast itinerary uses only two or three bases: two nights in Galle Fort, one in Weligama or Mirissa for the dawn whale boat, one in Hiriketiya for surf, and a last night near Yala or Tangalle for a safari. The coast road is slower than it looks, so keep moves short and afternoons free.',
       introduction: [
         'The mistake almost every first Down South itinerary makes is treating ninety minutes on the map as ninety minutes of driving. The coast road is one lane each way, full of buses and tuk-tuks and dogs, and slower than it looks. Every time you change hotel you lose half a day to packing, checking out, driving and checking in again.',
         'This route moves twice in five days. Everything else is walkable, swimmable or a short tuk-tuk away, and every day has a slow afternoon built into it, because the heat will make you want one whether you plan for it or not.'
@@ -398,7 +481,7 @@ DO NOT SWIM
       steps: [
         {
           title: 'Day 1 — Arrive Galle, Walk the Walls, Eat',
-          description: 'Take the expressway from the airport — two hours, worth every rupee of the toll — and aim to be inside Galle Fort by early afternoon. Stay inside the walls if you can afford one night there; a converted Dutch merchant house with a courtyard is the right way to arrive in this country.\n\nDo nothing ambitious. Wander Church Street and Pedlar Street, look into the Dutch Reformed Church and the old hospital arcade, and be on the ramparts by five for the walk anticlockwise to the lighthouse as the light goes. Then join [Galle Fort Food Walks](https://gallefortfoodwalks.lk) for their evening walk. Doing this first rather than last changes every meal for the rest of the trip.'
+          description: 'Take the expressway from the airport — two hours, worth every rupee of the toll — and aim to be inside Galle Fort by early afternoon. Stay inside the walls if you can afford one night there; a converted Dutch merchant house with a courtyard is the right way to arrive in this country.\n\nDo nothing ambitious. Wander Church Street and Pedlar Street, look into the Dutch Reformed Church and the old hospital arcade, and be on the ramparts by five for the walk anticlockwise to the lighthouse as the light goes. Then join an evening food walk through the Fort. Doing this first rather than last changes every meal for the rest of the trip.'
         },
         {
           title: 'Day 2 — Dalawella, the Tea Estate, Sunset at Ahangama',
@@ -407,19 +490,23 @@ DO NOT SWIM
         },
         {
           title: 'Day 3 — Move to Mirissa, Whale Boat at Dawn',
-          description: 'This is the first move, and it is a short one: forty-five minutes east to Mirissa or Weligama. If it is whale season (November to April), check out early and go straight to the harbour for the 06:30 boat with [Mirissa Blue Whale Tours](https://mirissabluewhale.lk), leaving your bags with your new guesthouse on the way. Take the seasickness tablet an hour before.\n\nYou will be back by eleven, tired and salt-crusted and perfectly happy. Write off the afternoon. Sleep, eat, and walk out to Coconut Tree Hill at the eastern end of the beach for the last hour of light. If it is not whale season, swap the boat for a morning surf lesson at Weligama and do the same afternoon.'
+          description: 'This is the first move, and it is a short one: forty-five minutes east to Mirissa or Weligama. If it is whale season (November to April), check out early and go straight to the harbour for the 06:30 whale boat, leaving your bags with your new guesthouse on the way. Take the seasickness tablet an hour before.\n\nYou will be back by eleven, tired and salt-crusted and perfectly happy. Write off the afternoon. Sleep, eat, and walk out to Coconut Tree Hill at the eastern end of the beach for the last hour of light. If it is not whale season, swap the boat for a morning surf lesson at Weligama and do the same afternoon.\n\nFor the night, Weligama is the easier base if you plan to surf: [Soul Surfer Camp](https://soulsurfercamp.com/) is twenty seconds from the sand, with a rooftop pool for the afternoon. If one of your nights here is a Saturday and you are not on the whale boat that morning, [Surfers Boat Party](https://boatpartymirissa.com/) leaves Mirissa harbour at 15:00 and sails past Coconut Tree Hill at sunset. It is the most social evening on this stretch of coast.'
         },
         {
           title: 'Day 4 — Hiriketiya, and Nothing Else',
-          description: 'Forty minutes further east is Hiriketiya, and the bay is small enough to do nothing in for a whole day. Surf the mellow left in the morning — or take your second lesson if you started yesterday — then eat, sleep, swim in the sheltered western corner, and watch the light go from the headland.\n\nYou can stay here tonight or push on to Tangalle. We usually stay: [Hiriketiya Surf House](https://hiriketiyasurfhouse.lk) is two minutes from the sand and the morning session is worth the extra night. If Hiriketiya is heaving, Talalla, one bay west, is a long quiet crescent with space.'
+          description: 'Forty minutes further east is Hiriketiya, and the bay is small enough to do nothing in for a whole day. Surf the mellow left in the morning — or take your second lesson if you started yesterday — then eat, sleep, swim in the sheltered western corner, and watch the light go from the headland.\n\nYou can stay here tonight or push on to Tangalle. We usually stay somewhere within walking distance of the sand, because the morning session is worth the extra night. If Hiriketiya is heaving, Talalla, one bay west, is a long quiet crescent with space.'
         },
         {
           title: 'Day 5 — A Safari, Then Tangalle',
-          description: 'Second move, and the earliest start of the trip. A 05:30 dawn drive into Yala with [Yala Leopard Safaris](https://yalaleopardsafaris.lk) means leaving Hiriketiya around four, which is brutal but worth it once. If that sounds like too much, the afternoon drive at Udawalawe is the gentler option — leave Hiriketiya after breakfast, be in the park by three, and watch the elephants come down to the reservoir as the heat drops.\n\nEither way, spend the last night in Tangalle or Tissamaharama. Tangalle’s beaches are long and empty compared to everything west of it, and Rekawa, twenty minutes east, has the turtle nesting watch after dark if you have the energy for one more late night.'
+          description: 'Second move, and the earliest start of the trip. A 05:30 dawn drive into Yala with a licensed jeep and tracker means leaving Hiriketiya around four, which is brutal but worth it once. If that sounds like too much, the afternoon drive at Udawalawe is the gentler option — leave Hiriketiya after breakfast, be in the park by three, and watch the elephants come down to the reservoir as the heat drops.\n\nEither way, spend the last night in Tangalle or Tissamaharama. Tangalle’s beaches are long and empty compared to everything west of it, and Rekawa, twenty minutes east, has the turtle nesting watch after dark if you have the energy for one more late night.'
         },
         {
           title: 'The Morning After — Getting Out',
           description: 'Colombo airport is four hours from Tangalle, three and a half from Galle, and the expressway is the only sensible route. Do not book a morning flight home from the south coast. An afternoon or evening departure lets you have breakfast on the beach, leave at ten and arrive with time to spare.'
+        },
+        {
+          title: 'Doing the Route on Your Own Wheels',
+          description: 'If you would rather not negotiate a new tuk-tuk every day, rent a vehicle once and keep it for the week. [Hello Rent](https://hellorentsrilanka.com/) in Weligama has air-conditioned cars for the longer legs, scooters and tuk-tuks for the short hops between bays, and will deliver to your hotel or the airport. You need a Sri Lankan driving permit on top of your licence to drive legally here, and they arrange that for you.'
         },
         {
           title: 'The Route in Copyable Form',
@@ -447,7 +534,25 @@ Walk in: everything else`
         'Leave one afternoon with nothing in it. The heat will make you grateful.',
         'Whale boat and safari are the two early starts. Put a slow day between them.'
       ],
-      conclusion: 'Five days is enough to feel the shape of this coast — the history at one end, the wildlife at the other, and the long lazy beaches in between. If you have more time, stretch the middle: an extra night at Ahangama, an extra night at Hiriketiya, and you will start to understand why so many people never quite leave.'
+      conclusion: 'Five days is enough to feel the shape of this coast — the history at one end, the wildlife at the other, and the long lazy beaches in between. If you have more time, stretch the middle: an extra night at Ahangama, an extra night at Hiriketiya, and you will start to understand why so many people never quite leave.',
+      faq: [
+        {
+          question: 'Is five days enough for Sri Lanka’s south coast?',
+          answer: 'Yes. Five days covers Galle Fort, a reef beach, the Mirissa whale boat, a surf session and one safari, as long as you limit yourself to two or three bases and keep one afternoon free.'
+        },
+        {
+          question: 'How long does it take to drive from Galle to Tangalle?',
+          answer: 'Galle to Tangalle takes about 1.5 to 2 hours on the coast road, which is slower than the distance suggests. The Southern Expressway is faster for longer trips, such as the four-hour run from Tangalle to Colombo airport.'
+        },
+        {
+          question: 'Should I stay in Mirissa or Weligama?',
+          answer: 'Stay in Weligama if surfing is a priority, because the beginner bay and the surf camps are right there. Stay in Mirissa for a livelier evening scene and the shortest trip to the whale boats; the two are only twenty minutes apart.'
+        },
+        {
+          question: 'Can I rent a car and drive myself on the south coast?',
+          answer: 'Yes, but you need a Sri Lankan driving permit endorsed on your International Driving Permit. Rental companies in Weligama can arrange it, and without it your travel insurance may not cover an accident.'
+        }
+      ]
     }
   },
 
@@ -466,18 +571,18 @@ Walk in: everything else`
       textColor: '#ffffff',
       topLabel: 'wildlife encounter',
       headlineText: 'Leopards in Yala',
-      partnerName: 'Yala Leopard Safaris',
       mockupImage: 'https://images.unsplash.com/photo-1661768508643-e260f6f8e06c?auto=format&fit=crop&w=800&q=80',
     },
     content: {
+      summary: 'Yala National Park Block 1 has one of the highest leopard densities in the world, and dawn drives in season see a leopard roughly half the time. Book a half-day jeep from Tissamaharama with a tracker, arrive at the Palatupana gate for the 05:30 opening, and budget about USD 60-90 per person. Block 1 usually closes from early September to mid-October.',
       introduction: [
         'Yala National Park has one of the densest leopard populations on earth — in Block 1, the most visited section, there is roughly one leopard for every square kilometre. In peak season it also has a queue of jeeps at the gate that can genuinely shock you. Both of those facts are true at once, and any honest account of a morning here has to hold them together.',
-        'We went out for a dawn drive with [Yala Leopard Safaris](https://yalaleopardsafaris.lk) to describe what the morning is really like, from the four o’clock alarm to the ethics of the scrum that forms around a sighting.'
+        'This is what a dawn drive is really like, from the four o’clock alarm to the ethics of the scrum that forms around a sighting — and how to choose a jeep that finds leopards without joining it.'
       ],
       steps: [
         {
           title: '04:15 — Tissamaharama in the Dark',
-          description: 'Most people stay in Tissamaharama, the lakeside town half an hour from the park, and the jeep collects you from your guesthouse in the dark with a flask of tea and a packed breakfast. The road out is quiet for about ten minutes. Then you start to see the other jeeps, all heading the same way.'
+          description: 'Most people stay in Tissamaharama, the lakeside town half an hour from the park, and the jeep collects you from your guesthouse in the dark with a flask of tea and a packed breakfast. The road out is quiet for about ten minutes. Then you start to see the other jeeps, all heading the same way.\n\nTissamaharama is about two and a half hours from Weligama by car. If you are driving yourself, [Hello Rent](https://hellorentsrilanka.com/) in Weligama rents air-conditioned cars and arranges the Sri Lankan driving permit; leave the day before and sleep in Tissa rather than attempting the drive at 02:30.'
         },
         {
           title: '05:00 — The Gate at Palatupana',
@@ -524,70 +629,112 @@ Closure: Block 1 typically early Sept to mid Oct, check dates`
         'Yala Block 1 usually closes for around six weeks from early September — check before you plan around it.',
         'Treat the leopard as a bonus. The elephants, crocodiles and birds are the morning; the cat is the story you tell afterwards.'
       ],
-      conclusion: 'Yala is not a quiet wilderness and it does not pretend to be. It is a dense, crowded, extraordinary park where the odds of seeing a leopard in the wild are better than almost anywhere, and a good tracker can find you one without joining the scrum. Go once, go early, and go with someone who switches the engine off.'
+      conclusion: 'Yala is not a quiet wilderness and it does not pretend to be. It is a dense, crowded, extraordinary park where the odds of seeing a leopard in the wild are better than almost anywhere, and a good tracker can find you one without joining the scrum. Go once, go early, and go with someone who switches the engine off.',
+      faq: [
+        {
+          question: 'What are the chances of seeing a leopard in Yala?',
+          answer: 'On a dawn drive in Yala Block 1 during the dry season, roughly half of jeeps see a leopard. Your odds improve with a good tracker, an early start and a half-day rather than a quick two-hour drive.'
+        },
+        {
+          question: 'What is the best time for a Yala safari?',
+          answer: 'The dawn drive, entering at the 05:30 gate opening, is best: the light is soft and animals are active. February to July is generally the best season, and Block 1 usually closes for around six weeks from early September.'
+        },
+        {
+          question: 'How much does a Yala safari cost?',
+          answer: 'A shared half-day jeep with park fees typically costs around USD 60-90 per person. Ask for the price split into jeep hire, park entry and service charges; the park fees are fixed and the jeep is the negotiable part.'
+        },
+        {
+          question: 'Where should I stay for a Yala safari?',
+          answer: 'Tissamaharama is the usual base, about 30 minutes from the Palatupana gate. Kataragama works too. Staying there the night before avoids a middle-of-the-night drive from the coast.'
+        },
+        {
+          question: 'Is Yala too crowded?',
+          answer: 'Block 1 is busy in peak season, with queues at the gate and clusters of jeeps at sightings. Block 5 via the Galge gate is quieter, and a tracker who avoids chasing radio calls makes a big difference.'
+        }
+      ]
     }
   },
 
   // 7
   {
-    id: 'partner-spotlight-mirissa-blue-whale-tours',
-    title: 'NEW PARTNER! - Mirissa Blue Whale Tours',
+    id: 'partner-spotlight-surfers-boat-party-mirissa',
+    title: 'NEW PARTNER! - Surfers Boat Party Mirissa',
     category: 'Partner Spotlights',
     date: 'July 08, 2026',
-    readTime: '3 min read',
+    readTime: '4 min read',
     author: 'Macka',
-    excerpt: 'The Mirissa boat we send readers to — a marine guide aboard, guideline distances kept, and a rebook if the sea gives you nothing.',
+    excerpt: 'Every Saturday out of Mirissa harbour: five hours, DJs, swim stops and the sunset past Coconut Tree Hill and Parrot Rock, for €20.',
     visualType: 'laptop-mockup',
     tileConfig: {
       bgColor: '#8c5855',
       textColor: '#ffffff',
       badgeText: 'NEW!',
       badgeColor: '#1c1c1c',
-      headlineText: 'Mirissa Whales',
+      headlineText: 'Mirissa Boat Party',
       scriptSubtitle: 'Mirissa, Sri Lanka',
-      mockupImage: 'https://images.unsplash.com/photo-1743933731242-2d60b6c61c31?auto=format&fit=crop&w=800&q=80',
+      mockupImage: 'https://images.unsplash.com/photo-1602867612779-3aaf54b425c2?auto=format&fit=crop&w=800&q=80',
     },
     content: {
+      summary: 'Surfers Boat Party is a five-hour yacht party that leaves Mirissa harbour every Saturday at 15:00 and returns around 20:00. Tickets are €20 and include unlimited refreshments, DJ sets, ocean swim stops and a sunset cruise past Coconut Tree Hill, Secret Beach and Parrot Rock. The 2026-27 season takes bookings from October.',
       introduction: [
-        'We are glad to introduce [Mirissa Blue Whale Tours](https://mirissabluewhale.lk) as a featured partner. They run dawn whale and dolphin trips out of Mirissa Fisheries Harbour from November to April, and they are who we point readers towards when they ask which of the thirty boats in the harbour to take.',
-        'What sets them apart is restraint. There are operators here who will chase a pod across the shipping lane for a photograph and cut across a whale’s path to get their boat closest. This is not one of them, and the difference shows in how the animals behave around the boat — a whale that is not being harassed surfaces more often and stays around longer.'
+        'Mirissa has two famous boat trips, and they could not be more different. The dawn whale boat is silent, early and about the animals. The Saturday boat party is loud, golden and about the people you meet on it. We are glad to introduce [Surfers Boat Party](https://boatpartymirissa.com/) as a featured partner, because it is the evening on this coast that most travellers tell us they remember.',
+        'It has been running out of Mirissa harbour since 2018, and it has grown with the surf scene in Weligama and Mirissa: most people on board are travellers who have spent the week in the water and want one big social night at the end of it.'
       ],
       steps: [
         {
-          title: 'How They Run the Morning',
-          description: 'A single-deck boat licensed for thirty passengers, run at twenty so nobody is fighting for a rail. Departure at 06:30 sharp, which means boarding from 06:15. A marine guide on board — not just a crew member with a microphone — who explains what you are seeing, how to read a blow, and why the boat is holding back when it holds back. Sri Lanka’s whale-watching guidelines followed as written: a hundred metres from the animal, approach from behind and to the side, engine to idle when a whale is close, and never more than a handful of boats around one sighting.'
+          title: 'How the Afternoon Runs',
+          description: 'You meet at Mirissa harbour for a 15:00 departure. The boat heads out along the headlands as the heat goes out of the day, with the DJ playing hip-hop, RnB, house and techno as the afternoon turns into evening. There are stops to jump in and swim in open water, and the route takes you past three of the most photographed spots on the south coast from the sea side: Coconut Tree Hill, Secret Beach and Parrot Rock.\n\nThe timing is the point. You are on the water for the last hours of light and the sunset itself, and the boat comes back into the harbour around 20:00, which leaves the evening open for dinner in Mirissa.'
         },
         {
-          title: 'What a Morning With Them Includes',
-          description: '• 06:30 departure from Mirissa Fisheries Harbour, back by 10:30-11:30\n• A marine guide on board who explains what you are looking at\n• Breakfast, water and seasickness tablets provided (take the tablet at 05:30)\n• Life jackets for everyone, shade on deck, a dry box for phones\n• A free second trip if you see no whales or dolphins at all\n• Hotel pick-up from Mirissa and Weligama on request'
+          title: 'What Is Included',
+          description: '• Five hours on the water, Saturday 15:00 to about 20:00\n• Resident DJs: hip-hop, RnB, house and techno\n• Ocean swim stops in open water\n• Unlimited refreshments on board\n• A professional crew running the boat and the safety side\n• The sunset along Coconut Tree Hill, Secret Beach and Parrot Rock'
         },
         {
           title: 'Who We Recommend It For',
-          description: 'Families, first-timers and anyone who would rather keep a respectful distance than get the closest possible photograph. The smaller boat is steadier than the big double-deckers and the guide makes the hour of open water before the first sighting genuinely interesting rather than a wait. Read our full hour-by-hour account of the dawn trip for the practical details of what the morning feels like.'
+          description: 'Solo travellers who want to meet people fast, groups of friends at the end of a surf week, and anyone staying in Weligama, Ahangama or Mirissa who wants one social evening that is not in a bar. The surf camps in Weligama, including [The Surfer](https://www.thesurferweligama.com/en), run boat-party nights as part of their weekly social programme, which tells you how it fits into the rhythm of a week on this coast.\n\nIt is not the whale boat. If wildlife is what you came for, book the 06:30 whale trip on a different morning and save Saturday afternoon for this.'
         },
         {
-          title: 'Booking and Prices',
-          description: 'Book directly on their site. They price lower on their own page than through the resellers on the beach road, because there is no commission built in, and direct bookings are the ones that get the hotel pick-up. Expect to pay somewhere between USD 40 and 60 per adult depending on the month, with children under twelve at roughly half. Peak-season mornings in January and February fill a week or more ahead.'
+          title: 'Practical Advice',
+          description: 'Wear swimwear under your clothes and bring a towel, sunscreen and a dry bag for your phone. Eat before you go. Arrange your ride home before you board, because tuk-tuks at the harbour at 20:00 know exactly how much demand there is; a PickMe booked as the boat comes in is easiest. If you have your own scooter, leave it at your guesthouse and take a tuk-tuk: nobody should ride the coast road after a boat party.'
         },
         {
           title: 'Quick Reference',
           description: 'For your notes:',
-          codeSnippet: `Operator: Mirissa Blue Whale Tours, Mirissa Fisheries Harbour
-Season: November to April (best December to April)
-Departure: 06:30, boarding 06:15
-Duration: 3-5 hours
-Boat: single deck, 20 passengers, marine guide aboard
-Includes: breakfast, water, seasickness tablets, life jackets
-No sighting: free rebook on another morning
-Book: direct at mirissabluewhale.lk`
+          codeSnippet: `Operator: Surfers Boat Party, Mirissa
+Departs: Mirissa Harbour, every Saturday at 15:00
+Returns: around 20:00 (5 hours)
+Price: EUR 20 per ticket
+Includes: DJ, swim stops, unlimited refreshments, sunset cruise
+Route: Coconut Tree Hill, Secret Beach, Parrot Rock
+Running since: 2018
+Season: bookings open from October 2026
+Book: boatpartymirissa.com`
         }
       ],
       keyTakeaways: [
-        'Season runs November to April, with December to April the most reliable.',
-        'Book directly on their site — peak-season mornings in January and February fill well ahead.',
-        'Take the seasickness tablet they give you at 05:30, before you leave the guesthouse, not on the boat.'
+        'It runs on Saturdays only, so plan your Mirissa nights around it.',
+        'Book ahead in December to March, when it fills with the surf crowd.',
+        'Do not ride a scooter home. Take a tuk-tuk or a PickMe.'
       ],
-      conclusion: 'We only feature operators we would send our own families to, and this is the boat we take ourselves. If you have one morning in Mirissa in season, spend it with them.'
+      conclusion: 'The whale boat is the Mirissa morning everyone plans for. The Saturday boat party is the Mirissa evening nobody expects to love as much as they do. If your week on the south coast includes a Saturday, spend the sunset on the water.',
+      faq: [
+        {
+          question: 'When does the Mirissa boat party run?',
+          answer: 'Surfers Boat Party runs every Saturday, leaving Mirissa harbour at 15:00 and returning around 20:00. Bookings for the 2026-27 season open from October 2026.'
+        },
+        {
+          question: 'How much is the Mirissa boat party?',
+          answer: 'Tickets cost €20 per person and include unlimited refreshments, the DJ sets and swim stops. Book directly on boatpartymirissa.com.'
+        },
+        {
+          question: 'Is the boat party the same as whale watching in Mirissa?',
+          answer: 'No. Whale watching is a quiet dawn trip focused on blue whales and dolphins, from November to April. The boat party is a Saturday afternoon and sunset social cruise with music and swimming.'
+        },
+        {
+          question: 'What should I bring to the Mirissa boat party?',
+          answer: 'Bring swimwear, a towel, sunscreen and a dry bag for your phone, and eat beforehand. Arrange a tuk-tuk or PickMe for the ride home rather than riding a scooter.'
+        }
+      ]
     }
   },
 
@@ -608,6 +755,7 @@ Book: direct at mirissabluewhale.lk`
       headlineText: 'how to eat down south: rice and curry, hoppers and kottu',
     },
     content: {
+      summary: 'To eat well on Sri Lanka’s south coast, match the dish to the hour: string hoppers or pol roti for breakfast, rice and curry at lunch between 12:00 and 14:00, short eats with tea in the afternoon, egg hoppers from about 18:00 and kottu roti late at night. Eat at busy local places, not hotel buffets, and carry cash.',
       introduction: [
         'The gap between eating adequately Down South and eating extraordinarily is not money. A plate of rice and curry at a roadside place costs a fraction of a mediocre pizza on the beach, and it is one of the great meals of Asia. The gap is knowing what time of day each thing is meant to be eaten, what the words on the board mean, and which door to walk through.',
         'This is everything we wish someone had explained before a first trip to the south coast, from the anatomy of a proper rice and curry to the sound that tells you kottu is nearby.'
@@ -647,7 +795,7 @@ Book: direct at mirissabluewhale.lk`
         },
         {
           title: '9. Take a Guided Walk on Your First Evening',
-          description: 'Doing this first rather than last changes every meal afterwards. Three hours with [Galle Fort Food Walks](https://gallefortfoodwalks.lk) teaches you what to point at, how spicy “not spicy” actually is, how to eat with your hand without making a mess, and which of the seven stops to return to alone later in the week. We send almost everyone.'
+          description: 'Doing this first rather than last changes every meal afterwards. Three hours with a local guide on a small-group food walk in Galle Fort teaches you what to point at, how spicy “not spicy” actually is, how to eat with your hand without making a mess, and which of the seven stops to return to alone later in the week. We send almost everyone.'
         },
         {
           title: 'The Menu Decoder',
@@ -673,7 +821,25 @@ FLAVOUR WORDS
         'Carry cash. The best kitchens Down South still do not take cards.',
         'Beach-front seafood by weight is an evening out, not a bargain. Real fish is at lunchtime near the harbour.'
       ],
-      conclusion: 'The food on this coast is one of the best reasons to be here, and almost none of it is on the tourist menus. Eat when locals eat, eat where the queue is, and let the roadside board teach you the words. By the end of the week you will be ordering egg hoppers by name and wondering how you ever ate anything else.'
+      conclusion: 'The food on this coast is one of the best reasons to be here, and almost none of it is on the tourist menus. Eat when locals eat, eat where the queue is, and let the roadside board teach you the words. By the end of the week you will be ordering egg hoppers by name and wondering how you ever ate anything else.',
+      faq: [
+        {
+          question: 'What is the most famous food in Sri Lanka?',
+          answer: 'Rice and curry is Sri Lanka’s signature meal: a mound of rice with six to twelve small dishes such as dhal, pol sambol and vegetable curries. Hoppers, string hoppers and kottu roti are the other essentials.'
+        },
+        {
+          question: 'When do Sri Lankans eat rice and curry?',
+          answer: 'Rice and curry is a lunch dish, served in local places from about noon and often gone by 14:00. At dinner the roadside stalls switch to hoppers and kottu.'
+        },
+        {
+          question: 'What are hoppers?',
+          answer: 'Hoppers (appa) are bowl-shaped pancakes of fermented rice flour and coconut milk, crisp at the edge and soft in the middle. An egg hopper has an egg cooked in the centre; eat them with lunu miris or seeni sambol.'
+        },
+        {
+          question: 'Is street food safe in Sri Lanka?',
+          answer: 'Street food is generally safe if it is cooked to order and eaten hot at a busy stall. Avoid food left sitting warm, drink bottled or filtered water, and be cautious with ice from roadside coolers.'
+        }
+      ]
     }
   },
 
@@ -694,6 +860,7 @@ FLAVOUR WORDS
       headlineText: '6 things nobody tells you about your first trip to sri lanka',
     },
     content: {
+      summary: 'Before a first trip to Sri Lanka, know that full-moon Poya days are holidays with no alcohol sold, temples require covered shoulders and knees and you must never pose with your back to a Buddha, tuk-tuk fares should be agreed first or booked on PickMe, cash runs the coast, and a head wobble usually means yes.',
       introduction: [
         'Sri Lanka is one of the easier countries in Asia to travel in — English is widely spoken, distances are short, people are extraordinarily kind to strangers — and one of the easiest to be quietly rude in without noticing. Almost every difficult first-trip story we hear comes down to a handful of small misunderstandings that nobody warned the traveller about.',
         'These are the six that matter most on the south coast, in roughly the order you will meet them.'
@@ -709,7 +876,7 @@ FLAVOUR WORDS
         },
         {
           title: '3. Agree the Tuk-Tuk Fare Before You Get In',
-          description: 'Or, better, use the PickMe app, which meters the ride, shows the price up front and removes the negotiation entirely. It works across Galle, Unawatuna, Weligama, Mirissa and most of the coast, and drivers are used to it.\n\nOff-app, ask the fare before you sit down, not at the destination. A short hop within a town should be a few hundred rupees; a ride between towns, a thousand or two. If a driver quotes something absurd, smile, say no thank you and wait for the next one — there is always a next one. And if the first thing a driver does after you get in is suggest a “better” hotel, a “special” shop or a “free” tour, say no; those are commission stops.'
+          description: 'Or, better, use the PickMe app, which meters the ride, shows the price up front and removes the negotiation entirely. It works across Galle, Unawatuna, Weligama, Mirissa and most of the coast, and drivers are used to it.\n\nOff-app, ask the fare before you sit down, not at the destination. A short hop within a town should be a few hundred rupees; a ride between towns, a thousand or two. If a driver quotes something absurd, smile, say no thank you and wait for the next one — there is always a next one. And if the first thing a driver does after you get in is suggest a “better” hotel, a “special” shop or a “free” tour, say no; those are commission stops.\n\nIf you would rather skip the tuk-tuk conversation altogether, rent your own. [Hello Rent](https://hellorentsrilanka.com/) in Weligama rents scooters, tuk-tuks and cars and arranges the Sri Lankan permit you legally need on top of your International Driving Permit — the step most first-timers do not know exists.'
         },
         {
           title: '4. Cash Still Runs the Coast',
@@ -742,7 +909,25 @@ Public displays of affection are quietly frowned upon`
         'The head wobble that looks like “no” is usually “yes, fine, of course”.',
         'Check the Poya calendar before planning any evening that involves a drink.'
       ],
-      conclusion: 'None of this is difficult. Sri Lankans are forgiving of visitors who get things wrong, and endlessly warm to visitors who try to get them right. Cover up at the temple, agree the fare, learn the thank-you, and the country opens up in a way that no beach can.'
+      conclusion: 'None of this is difficult. Sri Lankans are forgiving of visitors who get things wrong, and endlessly warm to visitors who try to get them right. Cover up at the temple, agree the fare, learn the thank-you, and the country opens up in a way that no beach can.',
+      faq: [
+        {
+          question: 'What is a Poya day in Sri Lanka?',
+          answer: 'A Poya day is the monthly full-moon Buddhist public holiday. Alcohol is not sold, some businesses close, and temples fill with worshippers dressed in white.'
+        },
+        {
+          question: 'What should I wear to a temple in Sri Lanka?',
+          answer: 'Cover your shoulders and knees, and remove shoes and hats before entering. Carry a sarong or light scarf so you are never caught out.'
+        },
+        {
+          question: 'Can tourists drive in Sri Lanka?',
+          answer: 'Yes, with a home licence, a government-issued International Driving Permit and a Sri Lankan permit endorsed on top of it. You can get the permit at Colombo airport, at the Department of Motor Traffic, or through a rental company.'
+        },
+        {
+          question: 'Do I need cash in Sri Lanka?',
+          answer: 'Yes. Cards work at hotels, supermarkets and larger restaurants, but local eateries, tuk-tuks, stalls and surf schools are mostly cash only. Withdraw rupees at bank ATMs and ask for small notes.'
+        }
+      ]
     }
   },
 
@@ -763,6 +948,7 @@ Public displays of affection are quietly frowned upon`
       headlineText: 'how to get around down south: coastal trains, tuk-tuks and scooters',
     },
     content: {
+      summary: 'The best ways to get around Sri Lanka’s south coast are the coastal train from Colombo to Galle and Matara, cheap buses between towns, tuk-tuks booked on the PickMe app, and a rented scooter for short hops. To ride or drive yourself you need a Sri Lankan permit on top of an International Driving Permit. Skip the self-drive hire car.',
       introduction: [
         'Renting a car Down South is almost always the wrong call. The coast road is slow, parking is scarce, and driving here has its own grammar — the overtaking bus, the tuk-tuk pulling out without looking, the dog asleep on the centre line — that takes weeks to learn. Fortunately you do not need one. Between the train, the buses, the tuk-tuk apps and your own feet, the whole coast is easy to move along.',
         'Here is every way of getting around, from the airport to the beach and between the towns, with honest notes on cost and on the one option that needs a proper warning.'
@@ -792,11 +978,11 @@ Fares: a few hundred rupees for any journey on the coast, by class`
         },
         {
           title: 'Hiring a Tuk-Tuk or Driver for the Day',
-          description: 'For a day trip inland — a tea estate, the rock temples, Sinharaja — hiring a tuk-tuk with its driver for the day is cheap and pleasant, usually somewhere around USD 25-40 depending on distance. For the safari parks, the expressway to the airport, or moving between bases with luggage, a car and driver costs roughly USD 60-90 a day including fuel and is the most comfortable way to cover distance. Your guesthouse will always know someone; agree the price and the route the night before.'
+          description: 'For a day trip inland — a tea estate, the rock temples, Sinharaja — hiring a tuk-tuk with its driver for the day is cheap and pleasant, usually somewhere around USD 25-40 depending on distance. For the safari parks, the expressway to the airport, or moving between bases with luggage, a car and driver costs roughly USD 60-90 a day including fuel and is the most comfortable way to cover distance. Your guesthouse will always know someone; agree the price and the route the night before.\n\nIf you would rather drive yourself, [Hello Rent](https://hellorentsrilanka.com/) in Weligama rents tuk-tuks — three seats and room for 60-80 litres of luggage — and air-conditioned cars and vans, delivered to your hotel or the airport. Self-drive needs the same Sri Lankan permit as a scooter.'
         },
         {
           title: 'Scooters: Legal Requirements Are Real',
-          description: 'Every guesthouse rents scooters for a few thousand rupees a day, and along the flat coast road between Ahangama and Weligama they are a genuinely lovely way to get to the surf. But the paperwork matters. To ride legally you need a valid licence from home, an International Driving Permit, and — this is the part everyone skips — a Sri Lankan recognition permit, which the Automobile Association of Ceylon issues in Colombo and some agencies can arrange on the coast for a fee. Without all three you are uninsured.\n\nThat is not a technicality. Your travel insurance will refuse a claim for any accident on a scooter without a valid licence, and the coast road has buses on it. If you have never ridden before, do not learn here. If you have, get the permit, wear the helmet, stay off the road after dark, and ride the back lanes rather than the A2.'
+          description: 'Every guesthouse rents scooters for a few thousand rupees a day, and along the flat coast road between Ahangama and Weligama they are a genuinely lovely way to get to the surf. But the paperwork matters. To ride legally you need a valid licence from home with the motorcycle category, a government-issued International Driving Permit (online-agency IDPs are not accepted), and — this is the part everyone skips — a Sri Lankan permit endorsed on top of it. You can get that permit at Colombo airport on arrival or at the Department of Motor Traffic in Colombo or Hambantota, both valid one month. Or let the rental shop do it: [Hello Rent](https://hellorentsrilanka.com/) in Weligama arranges a six-month permit through the Automobile Association while you stay at the beach, and rents automatic scooters from about €5 a day with a helmet included. Without all three documents you are uninsured.\n\nThat is not a technicality. Your travel insurance will refuse a claim for any accident on a scooter without a valid licence, and the coast road has buses on it. If you have never ridden before, do not learn here. If you have, get the permit, wear the helmet, stay off the road after dark, and ride the back lanes rather than the A2.'
         },
         {
           title: 'Bicycles and Feet',
@@ -821,7 +1007,25 @@ Surf run to the beach   scooter, with the permit, or a bicycle`
         'Sort the scooter permit properly or do not ride at all. Your insurance depends on it.',
         'Install PickMe before you land and you will never have the tuk-tuk price conversation.'
       ],
-      conclusion: 'The south coast is small, the towns are close together, and every one of them is on the same road, the same railway and the same bus route. Leave the hire car at the airport, take the train down the coast, and let a tuk-tuk do the rest.'
+      conclusion: 'The south coast is small, the towns are close together, and every one of them is on the same road, the same railway and the same bus route. Leave the hire car at the airport, take the train down the coast, and let a tuk-tuk do the rest.',
+      faq: [
+        {
+          question: 'What is the best way to get from Colombo airport to Galle?',
+          answer: 'The fastest way is by car on the E03 and E01 expressways, about two hours, for roughly USD 40-55. The cheapest is the airport bus to the Makumbura expressway terminal and then an expressway bus to Galle.'
+        },
+        {
+          question: 'Is the train from Colombo to Galle worth it?',
+          answer: 'Yes. The coastal line runs beside the sea for much of the way and takes about 2.5 to 3 hours on an express. Book a reserved second-class seat a few days ahead in season.'
+        },
+        {
+          question: 'Is it safe to rent a scooter in Sri Lanka?',
+          answer: 'It is reasonably safe for experienced riders who wear a helmet, avoid the main coast road where possible and do not ride after dark. Make sure you have the Sri Lankan permit, or your insurance will not cover you.'
+        },
+        {
+          question: 'Does Uber work in Sri Lanka?',
+          answer: 'Uber works in Colombo and Galle but is patchy elsewhere. PickMe, the local app, covers most of the south coast and shows tuk-tuk fares before you book.'
+        }
+      ]
     }
   },
 
@@ -842,6 +1046,7 @@ Surf run to the beach   scooter, with the permit, or a bicycle`
       headlineText: 'what things actually cost down south (and how to avoid the tourist price)',
     },
     content: {
+      summary: 'On Sri Lanka’s south coast in 2026, rice and curry costs about 600-1,200 LKR, a short tuk-tuk ride 300-600 LKR, a scooter from about €5 a day, a group surf lesson 5,000-8,000 LKR, a week at a Weligama surf camp from €290, a Mirissa whale boat USD 40-60 and a Yala jeep USD 60-90 per person. Pay in rupees and book direct.',
       introduction: [
         'There are two price lists Down South. One is official and unavoidable: foreigners pay more than locals at national parks, museums and some temples, and that is simply the rule. The other is informal and entirely negotiable: the tuk-tuk quote at the hotel gate, the “special price” for the surfboard, the fish priced by weight on the beach. The gap between them is not really about money — it is about knowing roughly what a thing should cost before you ask.',
         'Here are honest ranges as of the 2026 season, and the four checks we run before agreeing to anything. Prices are in Sri Lankan rupees (LKR) unless noted; the rupee moves, so treat these as ranges rather than quotes.'
@@ -874,7 +1079,7 @@ Tuk-tuk, Weligama to Hiriketiya      2,500 - 4,000 LKR
 Tuk-tuk hire, whole day              USD 25 - 40
 Car and driver, whole day, fuel in   USD 60 - 90
 Airport to Galle, expressway taxi    USD 40 - 55
-Scooter rental, per day              2,500 - 4,000 LKR (+ permit)
+Scooter rental, per day              from about EUR 5 (+ permit)
 Bicycle rental, per day              500 - 1,000 LKR`
         },
         {
@@ -883,7 +1088,8 @@ Bicycle rental, per day              500 - 1,000 LKR`
           codeSnippet: `Hostel dorm bed                      USD 8 - 15
 Guesthouse double, fan, breakfast    USD 25 - 45
 Guesthouse double, a/c, breakfast    USD 40 - 70
-Surf camp, per person, half board    USD 50 - 90
+Surf camp week, stay + lessons       EUR 290 - 790 per person
+Coliving room + coworking pass       ask for weekly and monthly rates
 Boutique villa or Fort hotel         USD 120 - 300+
 Peak season (Dec-Feb) adds 20-40% to all of the above`
         },
@@ -897,6 +1103,7 @@ Group surf lesson, 2 hrs             5,000 - 8,000 LKR
 Private surf lesson, 1.5 hrs         8,000 - 12,000 LKR
 Softboard rental, per day            1,000 - 1,500 LKR
 Whale boat, Mirissa                  USD 40 - 60 per person
+Saturday boat party, Mirissa         EUR 20 per ticket
 Yala jeep + park fees, half day      USD 60 - 90 per person (shared jeep)
 Udawalawe jeep + fees, half day      USD 50 - 80 per person (shared jeep)
 Rekawa turtle watch                  around 2,000 LKR per person
@@ -911,11 +1118,11 @@ Massage, beach-road spa, 1 hr        3,500 - 7,000 LKR`
         },
         {
           title: 'Check 2: Try Booking Direct',
-          description: 'Small operators usually price lower on their own site or WhatsApp than through a reseller, a hotel desk or a beach-road agent, because there is no platform commission built in. [Mirissa Blue Whale Tours](https://mirissabluewhale.lk) and [Hiriketiya Surf House](https://hiriketiyasurfhouse.lk) are both cheaper booked direct, and direct bookings are the ones that get the hotel pick-up thrown in.'
+          description: 'Small operators usually price lower on their own site or WhatsApp than through a reseller, a hotel desk or a beach-road agent, because there is no platform commission built in. Weekly surf packages at [The Surfer](https://www.thesurferweligama.com/en) in Weligama start from €290 with accommodation, lessons and most meals included, which beats paying for a room and lessons separately. Scooters at [Hello Rent](https://hellorentsrilanka.com/) start from about €5 a day with a helmet, and the Saturday [Surfers Boat Party](https://boatpartymirissa.com/) is a flat €20 booked on its own site.'
         },
         {
           title: 'Check 3: Separate the Park Fees From the Jeep',
-          description: 'A Yala or Udawalawe quote should break down into three parts: the jeep hire, the government park entry per person, and the vehicle and service charges. The park fees are fixed and printed at the gate; the jeep is the negotiable part. If an operator will not itemise it, that is your answer. [Yala Leopard Safaris](https://yalaleopardsafaris.lk) publish theirs.'
+          description: 'A Yala or Udawalawe quote should break down into three parts: the jeep hire, the government park entry per person, and the vehicle and service charges. The park fees are fixed and printed at the gate; the jeep is the negotiable part. If an operator will not itemise it, that is your answer.'
         },
         {
           title: 'Check 4: Watch for Urgency',
@@ -932,69 +1139,119 @@ Massage, beach-road spa, 1 hr        3,500 - 7,000 LKR`
         'If a quote arrives with urgency attached, that is information about the seller.',
         'The official foreigner price at parks is not negotiable. Everything outside the gate is.'
       ],
-      conclusion: 'A comfortable week on this coast — guesthouse, local food, a whale boat and a safari — costs less than a weekend in most European cities, and knowing the numbers above is what keeps it that way. Ask twice, book direct, and let the hurried quotes go past.'
+      conclusion: 'A comfortable week on this coast — guesthouse, local food, a whale boat and a safari — costs less than a weekend in most European cities, and knowing the numbers above is what keeps it that way. Ask twice, book direct, and let the hurried quotes go past.',
+      faq: [
+        {
+          question: 'How much money do I need per day on Sri Lanka’s south coast?',
+          answer: 'A budget traveller can manage on about USD 30-45 a day with a guesthouse, local food and buses. A mid-range day with an air-conditioned room, restaurant meals and tuk-tuks is roughly USD 70-120, before activities like whale watching or safaris.'
+        },
+        {
+          question: 'How much is a tuk-tuk in Sri Lanka?',
+          answer: 'A short ride within a town is about 300-600 LKR, and Galle to Unawatuna about 700-1,200 LKR. Use the PickMe app to see the fare before you book.'
+        },
+        {
+          question: 'How much does it cost to learn to surf in Weligama?',
+          answer: 'A two-hour group lesson costs about 5,000-8,000 LKR. A full week at a surf camp such as The Surfer, with accommodation, lessons and most meals, starts from €290.'
+        },
+        {
+          question: 'Should I pay in dollars or rupees in Sri Lanka?',
+          answer: 'Pay in rupees. Dollar or euro prices are almost always worse than the exchange rate, and small local businesses prefer cash in small rupee notes.'
+        }
+      ]
     }
   },
 
   // 12
   {
-    id: 'partner-spotlight-hiriketiya-surf-house',
-    title: 'NEW PARTNER! - Hiriketiya Surf House',
+    id: 'partner-spotlight-the-surfer-soul-surfer-camp-weligama',
+    title: 'NEW PARTNER! - The Surfer & Soul Surfer Camp, Weligama',
     category: 'Partner Spotlights',
     date: 'May 25, 2026',
     readTime: '4 min read',
     author: 'Macka',
-    excerpt: 'Eight rooms two minutes from Hiri bay, boards to borrow all day, and dawn lessons on the friendliest left on the coast.',
+    excerpt: 'Locally owned surf camps on Weligama Bay: ISA-certified coaches, four students per coach, video analysis, yoga, and weekly packages from €290.',
     visualType: 'laptop-mockup',
     tileConfig: {
       bgColor: '#b5684d',
       textColor: '#ffffff',
       badgeText: 'NEW!',
       badgeColor: '#1c1c1c',
-      headlineText: 'Hiriketiya Surf',
-      scriptSubtitle: 'Dikwella, Sri Lanka',
-      mockupImage: 'https://images.unsplash.com/photo-1752498227728-4454a5238ff3?auto=format&fit=crop&w=800&q=80',
+      headlineText: 'Weligama Surf Camps',
+      scriptSubtitle: 'Weligama, Sri Lanka',
+      mockupImage: 'https://images.unsplash.com/photo-1607429289259-456053385f53?auto=format&fit=crop&w=800&q=80',
     },
     content: {
+      summary: 'The Surfer is a locally owned surf camp in Weligama with three camps: Beach Camp, TS2 Camp and the boutique Soul Surfer Camp. Weekly packages include accommodation, ISA-certified lessons with a maximum of four students per coach, video analysis, yoga, breakfast daily and dinner six nights a week, from €290. The season runs October to April.',
       introduction: [
-        'Say hello to [Hiriketiya Surf House](https://hiriketiyasurfhouse.lk), eight rooms a two-minute walk from Hiri bay, on the lane that runs down to the sand from the Dikwella road. They are who we recommend for a first surf trip Down South, and the reason is simple: you can be in the water at 06:15 without organising anything, and back on the deck for breakfast by eight.',
-        'Hiriketiya has changed fast in the last few years and there are now dozens of places to stay around the bay. What we like about this one is that it has stayed small, kept its instructors local, and built the whole place around the morning session rather than the evening scene.'
+        'Say hello to [The Surfer](https://www.thesurferweligama.com/en) and its boutique camp, [Soul Surfer Camp](https://soulsurfercamp.com/). They are who we point readers to when the question is “where should I learn to surf in Sri Lanka?”, and the reason is simple: Weligama Bay is the gentlest beginner wave on the island, and this is the camp that grew up on it. It is owned by a Weligama local who was born and raised beside the bay.',
+        'It is also one of the most reviewed surf camps in the country, with a 4.9-star average from more than 1,600 reviews and six Tripadvisor Travellers’ Choice awards between 2018 and 2025. Those numbers match what we hear from readers who have stayed.'
       ],
       steps: [
         {
-          title: 'What Staying There Includes',
-          description: '• Eight rooms only — four doubles, two twins and two family rooms — with fans, mosquito nets and hot water, and air-conditioning in four of them\n• Boards to borrow for the length of your stay: softboards for beginners, a rack of mid-lengths and shortboards for everyone else\n• Dawn lessons on the mellow left with local instructors, two guests to a coach\n• Breakfast on the deck — hoppers, fruit, eggs, proper coffee — included in the rate\n• A kitchen that will feed you after dark, and a fridge you can help yourself to\n• Bicycles for the lanes behind the bay, and a tuk-tuk on call for Talalla and Dikwella'
+          title: 'Three Camps, One Surf School',
+          description: 'The Surfer runs three camps on the same programme, so you choose by atmosphere and budget rather than by coaching quality.\n\n• TS2 Camp — the best-value option, weekly packages from €290 for seven nights\n• Beach Camp — closer to the sand, from €390 a week\n• Soul Surfer Camp — the boutique camp in Paranakade, twenty seconds from the beach, with a rooftop infinity pool and a sea-view restaurant, from €390 a week\n\nRooms range from dorm beds to private doubles, twins and triples; a private single on the fullest surf package runs to about €790 a week.'
         },
         {
-          title: 'How the Surf Programme Works',
-          description: 'Complete beginners do a first lesson in the sheltered western corner of the bay, where the whitewater is knee-deep and forgiving, and move onto the left once they can pop up. Improvers get coached in the line-up itself, one instructor to two guests, with video on the second and third days so you can see what your feet are doing. Anyone who can already surf just takes a board and goes; the instructors will tell you where the bay is working that morning and when the tide will kill it.\n\nLessons are booked the night before at dinner. Nothing is compulsory, and plenty of guests spend half the week not surfing at all.'
+          title: 'How the Coaching Works',
+          description: 'Lessons are run by ISA-certified instructors with a maximum of four students per coach, which is the ratio that actually matters for beginners: someone close enough to push you into the right wave and tell you what went wrong. Video analysis shows you what your feet and hips are doing, which usually fixes in one evening what three more lessons would not. Boards and rash guards are provided.\n\nThe camps suit everyone from never-stood-up beginners to advanced surfers. With nine or ten breaks within a five to ten minute ride of Weligama, the coaches move you to the spot that suits the day and your level rather than keeping everyone on the same patch of whitewater.'
         },
         {
-          title: 'Who We Recommend It For',
-          description: 'First-timers who want to learn without a week-long camp commitment; couples where one person surfs and the other does not; and anyone who has done two lessons at Weligama and wants a smaller, prettier bay to keep going in. It is not a party house — the bar closes at ten so the dawn patrol can sleep — and it is not a resort. It is a well-run surf guesthouse two minutes from one of the best learner waves on the coast.'
+          title: 'Soul Surfer Camp Packages',
+          description: 'Soul Surfer Camp publishes three weekly packages, each for seven nights per person:',
+          codeSnippet: `Moderate Surf   from EUR 390   6 lessons / week, 2 yoga sessions
+Surf & Yoga     from EUR 450   6 lessons / week, daily yoga
+Full Surf       from EUR 490   11 lessons / week, 2 yoga sessions
+
+All include: accommodation (dorm, single or double/twin ensuite),
+breakfast daily, dinner daily except Sunday, boards, rash guard,
+video analysis, and the camp's social programme`
         },
         {
-          title: 'Booking and Prices',
-          description: 'Book directly on their site; the direct rate includes breakfast and board use, which the booking platforms strip out. Expect roughly USD 45-70 a night for a double depending on season and room, with lessons added per session. Stays of five nights or more get a lesson package rate. January and February book out a month or more ahead; the shoulder months of November and April are quieter and just as good in the water.'
+          title: 'The Rest of the Week',
+          description: 'The camps are social by design. Breakfast is every day and dinner every night except Sunday, there is yoga at sunrise or sunset, and the weekly programme includes boat parties, pool parties and day trips along the coast. The Saturday [Surfers Boat Party](https://boatpartymirissa.com/) out of Mirissa is part of that rhythm.\n\nIf you need to work some of the time, [Mellow Bay Living](https://mellowbayliving.com/) in Pelena, at the Matara end of Weligama, has a proper air-conditioned coworking room and pairs its stays with Soul Surfer Camp coaching.'
+        },
+        {
+          title: 'When to Go',
+          description: 'The Surfer’s season runs from 1 October to 30 April, and December to March is the most consistent. The water sits around 28°C, so there is no wetsuit to pack. Outside the season the southwest monsoon makes the bay rough, and the east coast around Arugam Bay takes over.'
         },
         {
           title: 'Quick Reference',
           description: 'For your notes:',
-          codeSnippet: `Where: Hiriketiya bay, Dikwella, 2 min walk to the sand
-Rooms: 8 (doubles, twins, two family rooms), 4 with a/c
-Includes: breakfast, boards for your stay, bicycles
-Lessons: dawn, 2 guests per instructor, video from day 2
-Season: November to April; bay is usable most of the year
-Best for: 5+ night stays, first-timers and improvers
-Book: direct at hiriketiyasurfhouse.lk`
+          codeSnippet: `Operator: The Surfer, Weligama (camps: TS2, Beach Camp, Soul Surfer Camp)
+Soul Surfer Camp: No. 140/13, 3rd Lane, Paranakade, Weligama 81700
+Coaching: ISA-certified, max 4 students per coach, video analysis
+Levels: complete beginner to advanced
+Meals: breakfast daily, dinner daily except Sunday
+Packages: from EUR 290 / week (TS2), EUR 390 (Beach, Soul Surfer)
+Season: 1 October to 30 April, best December to March
+Water: about 28C, no wetsuit needed
+Book: thesurferweligama.com  |  soulsurfercamp.com`
         }
       ],
       keyTakeaways: [
-        'Best for stays of a week or more — Hiri rewards settling in rather than passing through.',
-        'Book ahead for January and February; the bay is no longer a secret.',
-        'Direct bookings include breakfast and boards. The platform rate does not.'
+        'A week is the right length. Most beginners stand on day one and ride green waves by the end of the week.',
+        'Choose TS2 for budget, Beach Camp for the sand, Soul Surfer Camp for the pool and daily yoga.',
+        'Book December to March well ahead; this is the busiest surf season on the south coast.'
       ],
-      conclusion: 'If you are going to learn to surf on this coast, learn it somewhere you can walk to the wave in your bare feet before the sun is up. This is that place.'
+      conclusion: 'If you are going to learn to surf in Sri Lanka, learn it in Weligama, and learn it somewhere a coach is close enough to see what you are doing wrong. That is what these camps do best.',
+      faq: [
+        {
+          question: 'What is the best surf camp in Weligama?',
+          answer: 'The Surfer is one of the most established surf camps in Weligama: locally owned, with a 4.9-star average from over 1,600 reviews and six Tripadvisor Travellers’ Choice awards. It runs three camps, including the boutique Soul Surfer Camp.'
+        },
+        {
+          question: 'How much does a surf camp in Weligama cost?',
+          answer: 'At The Surfer, a seven-night package with accommodation, lessons and most meals starts from €290 at TS2 Camp and €390 at Beach Camp or Soul Surfer Camp. Soul Surfer Camp’s Full Surf package with eleven lessons is from €490.'
+        },
+        {
+          question: 'Is Weligama good for beginner surfers?',
+          answer: 'Yes. Weligama Bay is one of the easiest places in the world to learn: a sand-bottom beach break with slow waves and warm water around 28°C. Coaches can also move improvers to nearby reef breaks.'
+        },
+        {
+          question: 'When is the surf season in Weligama?',
+          answer: 'The Surfer operates from 1 October to 30 April, with December to March the most consistent months. From May to September the monsoon makes the south coast rough.'
+        }
+      ]
     }
   },
 
@@ -1013,13 +1270,13 @@ Book: direct at hiriketiyasurfhouse.lk`
       textColor: '#292522',
       topLabel: 'wildlife encounter',
       headlineText: 'Elephants at Udawalawe',
-      partnerName: 'Yala Leopard Safaris',
       mockupImage: 'https://images.unsplash.com/photo-1719807633728-7ff13f7f2b61?auto=format&fit=crop&w=800&q=80',
     },
     content: {
+      summary: 'Udawalawe National Park is the best place in Sri Lanka to see wild elephants: open grassland around a reservoir where herds are seen on virtually every drive. Book the afternoon jeep from about 14:30, when elephants come to the water. It is 1.5 to 2 hours from Tangalle, costs roughly USD 50-80 per person, and has far fewer jeeps than Yala.',
       introduction: [
         'Everyone Down South books Yala for the leopards, then spends the morning in a queue of jeeps. Ninety minutes north of the coast, Udawalawe National Park has a fraction of the traffic and a resident population of several hundred elephants that you are almost guaranteed to see — in herds, in the open, doing what elephants do when nobody is bothering them.',
-        'If you have one safari in you, and what you actually want is to watch large animals behave normally rather than to tick off a cat, this is the better drive. We go with [Yala Leopard Safaris](https://yalaleopardsafaris.lk), who run both parks and are honest about which one suits which visitor.'
+        'If you have one safari in you, and what you actually want is to watch large animals behave normally rather than to tick off a cat, this is the better drive. Here is how to do it well, and how to decide between Udawalawe and Yala.'
       ],
       steps: [
         {
@@ -1036,7 +1293,7 @@ Book: direct at hiriketiyasurfhouse.lk`
         },
         {
           title: 'Getting There From the Coast',
-          description: 'Udawalawe is inland from the coast, roughly ninety minutes to two hours by car from Tangalle or Hiriketiya via Embilipitiya, and about two and a half from Mirissa. The practical way to do it is a car and driver for the day from your guesthouse, with the jeep operator meeting you at the park gate, or an operator who does the whole thing door to door. There are a few guesthouses around the park entrance if you want to sleep nearby and combine it with Yala the next morning; the two parks are about ninety minutes apart.'
+          description: 'Udawalawe is inland from the coast, roughly ninety minutes to two hours by car from Tangalle or Hiriketiya via Embilipitiya, and about two and a half from Mirissa. The practical way to do it is a car and driver for the day from your guesthouse, with the jeep operator meeting you at the park gate, or an operator who does the whole thing door to door. If you want to drive yourself, [Hello Rent](https://hellorentsrilanka.com/) in Weligama rents air-conditioned cars and arranges the Sri Lankan driving permit you need. There are a few guesthouses around the park entrance if you want to sleep nearby and combine it with Yala the next morning; the two parks are about ninety minutes apart.'
         },
         {
           title: 'Udawalawe or Yala?',
@@ -1062,7 +1319,25 @@ Sightings: elephants on virtually every drive, often 50-100 in a day`
         'Book the afternoon drive. The herds come to the water as the heat drops, and the light is the best of the day.',
         'Ask for a shared jeep of six or fewer. A full nine-seater on a dusty track is nobody’s idea of a wildlife experience.'
       ],
-      conclusion: 'Yala gets the headlines and deserves them. Udawalawe gets the elephants, the space and the light, and on most afternoons it gets you a herd at the water with no other jeep in sight. For a first safari, that is the one we would choose.'
+      conclusion: 'Yala gets the headlines and deserves them. Udawalawe gets the elephants, the space and the light, and on most afternoons it gets you a herd at the water with no other jeep in sight. For a first safari, that is the one we would choose.',
+      faq: [
+        {
+          question: 'Where is the best place to see elephants in Sri Lanka?',
+          answer: 'Udawalawe National Park is the most reliable place to see wild elephants in Sri Lanka, with herds seen on virtually every drive. Minneriya and Kaudulla in the north-central region host large gatherings from about July to October.'
+        },
+        {
+          question: 'Is the morning or afternoon safari better at Udawalawe?',
+          answer: 'The afternoon drive, from about 14:30 to 18:00, is usually better at Udawalawe. Herds come down to the reservoir as the heat drops, and the late light is the best of the day.'
+        },
+        {
+          question: 'How far is Udawalawe from the south coast?',
+          answer: 'Udawalawe is about 1.5 to 2 hours by car from Tangalle or Hiriketiya and about 2.5 hours from Mirissa or Weligama, via Embilipitiya.'
+        },
+        {
+          question: 'Is the Elephant Transit Home at Udawalawe ethical?',
+          answer: 'The Elephant Transit Home is a rehabilitation nursery that raises orphaned calves and releases them into the park. Visitors watch feeding times from a platform with no touching or riding, which makes it a better choice than elephant orphanages or riding camps.'
+        }
+      ]
     }
   },
 
@@ -1072,7 +1347,7 @@ Sightings: elephants on virtually every drive, often 50-100 in a day`
     title: 'Want to Learn to Surf Down South, But Not Sure Where to Start? Read This!',
     category: 'Surf & Beaches',
     date: 'May 08, 2026',
-    readTime: '5 min read',
+    readTime: '6 min read',
     author: 'Macka',
     excerpt: 'A practical first-week plan for complete beginners — how many lessons you actually need, and what to stop paying for.',
     visualType: 'graphic-bold',
@@ -1084,6 +1359,7 @@ Sightings: elephants on virtually every drive, often 50-100 in a day`
       headlineText: 'want to learn to surf down south, but not sure where to start? read this!',
     },
     content: {
+      summary: 'To learn to surf on Sri Lanka’s south coast, start at Weligama Bay between November and April. Take two lessons with a school that keeps four or fewer students per coach, then practise on a rented softboard, or book a week at a surf camp that combines coaching, video analysis and accommodation. Surf at dawn, wear a rash vest, and move to Hiriketiya once you can stand.',
       introduction: [
         'The south coast of Sri Lanka is the cheapest and gentlest place most people will ever get to learn to surf. The water is warm all year, the beginner waves are small and slow, the sand is soft, the boards cost a few dollars a day, and the instructors have taught thousands of people exactly like you. You do not need a two-week camp, a wetsuit, or any equipment at all.',
         'Here is the plan we give friends who arrive having never stood on a board, including the honest bit about when to stop paying for lessons and simply practise.'
@@ -1095,7 +1371,7 @@ Sightings: elephants on virtually every drive, often 50-100 in a day`
         },
         {
           title: '2. Choose a School by Its Ratio, Not Its Sign',
-          description: 'There are dozens of schools on the bay and most are fine. The things that matter: no more than four students to one instructor, softboards in good condition, a rash vest included, and a lesson that starts on the sand with the pop-up rather than straight in the water. Ask whether the instructor goes in the water with you and pushes you into waves — for the first two lessons, that is the whole job. A group lesson runs 5,000-8,000 rupees for two hours; a private one 8,000-12,000. The private lesson is worth it once, on the first day.'
+          description: 'There are dozens of schools on the bay and most are fine. The things that matter: no more than four students to one instructor, softboards in good condition, a rash vest included, and a lesson that starts on the sand with the pop-up rather than straight in the water. Ask whether the instructor goes in the water with you and pushes you into waves — for the first two lessons, that is the whole job. A group lesson runs 5,000-8,000 rupees for two hours; a private one 8,000-12,000. The private lesson is worth it once, on the first day.\n\nThe other route is a surf camp, where the coaching, the room and the crew come as one weekly package. It suits people who want structure and company rather than figuring it out alone. [The Surfer](https://www.thesurferweligama.com/en) in Weligama is the one we recommend: ISA-certified coaches, a maximum of four students each, video analysis in the evenings, and packages from €290 a week. Its boutique camp, [Soul Surfer Camp](https://soulsurfercamp.com/), adds daily yoga and a rooftop pool twenty seconds from the sand.'
         },
         {
           title: '3. Two Lessons, Then Stop Booking Lessons',
@@ -1115,7 +1391,7 @@ Sightings: elephants on virtually every drive, often 50-100 in a day`
         },
         {
           title: '7. On Day Five, Move to Hiriketiya',
-          description: 'Once you can stand up and turn a little, Weligama’s crowd of other beginners becomes a limitation. Hiriketiya, forty minutes east, has a mellow left that runs a long way and a sheltered corner for practising, and it is the natural graduation. Stay somewhere you can walk to the water — [Hiriketiya Surf House](https://hiriketiyasurfhouse.lk) is two minutes from the sand and their instructors coach in the line-up rather than the whitewater — and spend the second half of the week there.'
+          description: 'Once you can stand up and turn a little, Weligama’s crowd of other beginners becomes a limitation. Hiriketiya, forty minutes east, has a mellow left that runs a long way and a sheltered corner for practising, and it is the natural graduation. Stay somewhere you can walk to the water, and spend the second half of the week there. A rented scooter from [Hello Rent](https://hellorentsrilanka.com/) in Weligama makes the move easy and lets you check Talalla and Dikwella when Hiriketiya is crowded — sort the Sri Lankan permit first.'
         },
         {
           title: 'The First Week, Day by Day',
@@ -1141,7 +1417,25 @@ Cost for the week: roughly 25,000-40,000 LKR in lessons and board hire`
         'Two lessons, a week of practice, then one more lesson for the first green wave. That is the honest path.',
         'Dawn and late afternoon only. The midday bay is windy, crowded and dangerous to skin.'
       ],
-      conclusion: 'Learning to surf is mostly falling off a board in warm water while the sun comes up over a palm-lined bay, and there are worse ways to spend a week. Start at Weligama, be honest about when the lessons have done their job, and let Hiriketiya finish the work.'
+      conclusion: 'Learning to surf is mostly falling off a board in warm water while the sun comes up over a palm-lined bay, and there are worse ways to spend a week. Start at Weligama, be honest about when the lessons have done their job, and let Hiriketiya finish the work.',
+      faq: [
+        {
+          question: 'How many surf lessons do beginners need?',
+          answer: 'Most beginners stand up within one or two lessons. After that, a week of daily practice on a softboard, plus one more coached session to catch a first unbroken wave, gets most people surfing.'
+        },
+        {
+          question: 'Can you learn to surf in a week in Sri Lanka?',
+          answer: 'Yes. A week in Weligama, surfing every morning, is enough for most people to stand reliably, turn along the wave and ride green waves by the end. A surf camp with daily coaching speeds this up.'
+        },
+        {
+          question: 'Is a surf camp or individual lessons better?',
+          answer: 'Individual lessons are cheaper if you are happy to practise alone. A surf camp costs more but includes daily coaching, video analysis, accommodation and a social group, which suits solo travellers and anyone who wants structure.'
+        },
+        {
+          question: 'What should I bring to learn surfing in Sri Lanka?',
+          answer: 'A long-sleeved rash vest, zinc sunscreen for your face, a hat and plenty of water. Boards are provided by schools and camps, and the water is warm enough that you need no wetsuit.'
+        }
+      ]
     }
   },
 
@@ -1162,6 +1456,7 @@ Cost for the week: roughly 25,000-40,000 LKR in lessons and board hire`
       headlineText: 'how to plan a trip down south: when to come, how long, where to stay',
     },
     content: {
+      summary: 'Visit Sri Lanka’s south coast between December and April, when it is dry and the sea is calm. Allow five days for the highlights or ten for a relaxed trip, and use two bases: Galle plus Weligama, Ahangama or Mirissa. Apply for the ETA visa online a week before you fly. From May to September, the east coast is the better choice.',
       introduction: [
         'Sri Lanka has two monsoons that hit opposite coasts at opposite times of year, which is why so much advice about the country contradicts itself. Someone who went in July and someone who went in January visited two different islands. For Down South, only one of those monsoons matters, and once you understand it the rest of the planning falls into place.',
         'Here is how to time a south coast trip, how long to give it, where to base yourself, what to sort before you fly, and an honest answer on what to do if your dates fall in the wrong half of the year.'
@@ -1185,11 +1480,12 @@ Cost for the week: roughly 25,000-40,000 LKR in lessons and board hire`
         },
         {
           title: 'Where to Base Yourself',
-          description: 'The coast is small enough that you can see all of it from two bases, and the mistake is choosing five. Galle for history, food and the Fort, with the beaches at Unawatuna and Dalawella minutes away. Ahangama, Weligama or Mirissa for surf, whales and the middle of everything. Hiriketiya for doing very little in a very pretty bay. Tangalle for long empty beaches and the parks within reach. Pick two, stay three to five nights in each, and resist the third.',
+          description: 'The coast is small enough that you can see all of it from two bases, and the mistake is choosing five. Galle for history, food and the Fort, with the beaches at Unawatuna and Dalawella minutes away. Ahangama, Weligama or Mirissa for surf, whales and the middle of everything. Hiriketiya for doing very little in a very pretty bay. Tangalle for long empty beaches and the parks within reach. Pick two, stay three to five nights in each, and resist the third.\n\nIf you are working remotely, Weligama is the answer: it has the easiest surf on the island and the best-equipped places to work. [Mellow Bay Living](https://mellowbayliving.com/) in Pelena is a beachfront coliving house with an air-conditioned coworking room, desks, monitors and fibre Wi-Fi on day, week or month passes.',
           codeSnippet: `GALLE / UNAWATUNA    history, food, Fort hotels, easy first base
                      nearest beaches: Dalawella, Jungle Beach, Unawatuna
 AHANGAMA             surf every day, cafes, quieter than Weligama
-WELIGAMA / MIRISSA   first surf lessons, whale boat, busiest nightlife
+WELIGAMA / MIRISSA   first surf lessons, surf camps, coworking, whale boat
+                     and the Saturday boat party
 HIRIKETIYA           small bay, learner left, slow days
 TANGALLE             empty beaches, Rekawa turtles, gateway to the parks
 TISSAMAHARAMA        one night only, for the Yala dawn drive`
@@ -1200,11 +1496,11 @@ TISSAMAHARAMA        one night only, for the Yala dawn drive`
         },
         {
           title: 'On Arrival',
-          description: 'Buy a local SIM at the airport counter — Dialog or Mobitel, a few thousand rupees for a month of generous data — and install PickMe for tuk-tuks before you leave the building. Take rupees from the ATM in small notes. Then either take a pre-booked transfer or the expressway bus south, and you will be on the coast in two hours.'
+          description: 'Buy a local SIM at the airport counter — Dialog or Mobitel, a few thousand rupees for a month of generous data — and install PickMe for tuk-tuks before you leave the building. Take rupees from the ATM in small notes. Then either take a pre-booked transfer or the expressway bus south, and you will be on the coast in two hours.\n\nIf you plan to ride or drive, the airport is also where you can get the Sri Lankan driving permit on arrival, valid one month. For longer trips, [Hello Rent](https://hellorentsrilanka.com/) in Weligama arranges a six-month permit and can deliver a car or scooter to the airport or your hotel.'
         },
         {
           title: 'Book Ahead, or Walk In?',
-          description: 'In January and February: book the Fort hotel, the whale boat and the safari jeep ahead, and the guesthouse for the first couple of nights. Everything else — surf lessons, tuk-tuks, restaurants, the next guesthouse — is walk-in on this coast, and booking it from home usually costs more than turning up. Outside peak season, book the first night and improvise. Direct with [Mirissa Blue Whale Tours](https://mirissabluewhale.lk), [Yala Leopard Safaris](https://yalaleopardsafaris.lk) and [Hiriketiya Surf House](https://hiriketiyasurfhouse.lk) is always cheaper than through a platform.'
+          description: 'In January and February: book the Fort hotel, the whale boat and the safari jeep ahead, and the guesthouse for the first couple of nights. Everything else — surf lessons, tuk-tuks, restaurants, the next guesthouse — is walk-in on this coast, and booking it from home usually costs more than turning up. Outside peak season, book the first night and improvise. Booking direct with small operators is almost always cheaper than through a platform. The exception to walk-in is a surf camp week: [The Surfer](https://www.thesurferweligama.com/en) in Weligama fills its December to March weeks early, and so does the Saturday [Surfers Boat Party](https://boatpartymirissa.com/) in Mirissa.'
         },
         {
           title: 'What to Pack',
@@ -1233,7 +1529,25 @@ May to September: go east instead, and visit Galle for two days.`
         'Book whale trips and Yala jeeps ahead in January and February; walk in for everything else.',
         'Two bases, three to five nights each. The coast road makes every extra move expensive in time.'
       ],
-      conclusion: 'Get the season right and the rest of a south coast trip almost plans itself: two bases, a few early starts, and a lot of slow afternoons. Get the season wrong and no amount of planning will fix the sea. Check the monsoon first, then book the flights.'
+      conclusion: 'Get the season right and the rest of a south coast trip almost plans itself: two bases, a few early starts, and a lot of slow afternoons. Get the season wrong and no amount of planning will fix the sea. Check the monsoon first, then book the flights.',
+      faq: [
+        {
+          question: 'What month is best for Sri Lanka’s south coast?',
+          answer: 'January to March is the best period for Sri Lanka’s south coast, with dry weather, calm seas, whales offshore and consistent surf. December and April are also good; March and April are quieter and hotter.'
+        },
+        {
+          question: 'Is it worth visiting the south coast of Sri Lanka in the monsoon?',
+          answer: 'From May to September the south coast is rainy with rough seas, so beaches and whale watching suffer. Galle Fort is still worth a couple of days, but spend most of the trip on the east coast, which is dry then.'
+        },
+        {
+          question: 'Do I need a visa for Sri Lanka?',
+          answer: 'Most nationalities need an Electronic Travel Authorisation (ETA), applied for online through the official government site before travel. It is valid for 30 days and can be extended in Colombo; check current rules for your passport.'
+        },
+        {
+          question: 'Is Weligama a good base for remote work?',
+          answer: 'Yes. Weligama combines beginner surf with coliving houses that have proper workspaces, such as Mellow Bay Living’s air-conditioned coworking room with fibre Wi-Fi and monitors, on day, week or month passes.'
+        }
+      ]
     }
   },
 
@@ -1254,6 +1568,7 @@ May to September: go east instead, and visit Galle for two days.`
       headlineText: 'our best tips for: eating well down south',
     },
     content: {
+      summary: 'To eat well in Sri Lanka with a low spice tolerance or allergy, ask for food mild twice, saying “sera nethuwa” (no chilli), and carry an allergy card written in Sinhala. Ask specifically about Maldive fish, which hides in vegetarian-looking sambols. Eat at busy stalls that cook to order, drink bottled or filtered water, and cool chilli with curd, not water.',
       introduction: [
         'Sri Lankan food is hotter than most visitors expect, and “not spicy” is a relative term everywhere on this coast. Coconut is in almost everything, dried fish hides in dishes that look vegetarian, and a roadside griddle at nine at night is both the best meal of the trip and the one your stomach is most nervous about.',
         'All of that is manageable with a little preparation and a couple of phrases. These are the habits that consistently produce good meals here, whatever your constraints — and a fortnight of street food without a bad night is entirely realistic if you follow them.'
@@ -1285,7 +1600,7 @@ May to September: go east instead, and visit Galle for two days.`
         },
         {
           title: '7. Ask About Mild and Vegetarian Routes When You Book',
-          description: 'Any cooking class, food walk or guesthouse kitchen will happily run a mild, vegetarian, vegan or allergy-aware version of what they do — if you tell them beforehand. Operators like [Galle Fort Food Walks](https://gallefortfoodwalks.lk) run mild and vegetarian routes on request and will adjust every stop for a nut or seafood allergy. Ask when booking, not on arrival, so the kitchens along the way have been warned.'
+          description: 'Any cooking class, food walk or guesthouse kitchen will happily run a mild, vegetarian, vegan or allergy-aware version of what they do — if you tell them beforehand. Good food-walk operators run mild and vegetarian routes on request and will adjust every stop for a nut or seafood allergy, and surf camps that serve set dinners can plan around your needs if they know in advance. Ask when booking, not on arrival, so the kitchens along the way have been warned.'
         },
         {
           title: 'The Phrases and the Card',
@@ -1314,74 +1629,108 @@ Allergy card (have a local write the Sinhala under each line):
         'Maldive fish hides in sambols and vegetable curries. Ask about it by name.',
         'Busy stall, cooked to order, eaten hot. That rule covers almost every case.'
       ],
-      conclusion: 'None of this should put you off the roadside griddle, which is where the best eating on this coast happens. Ask for mild twice, carry the card, follow the queue, and you will eat brilliantly for a fortnight without a bad night.'
+      conclusion: 'None of this should put you off the roadside griddle, which is where the best eating on this coast happens. Ask for mild twice, carry the card, follow the queue, and you will eat brilliantly for a fortnight without a bad night.',
+      faq: [
+        {
+          question: 'Is Sri Lankan food very spicy?',
+          answer: 'Yes, Sri Lankan food is usually hotter than visitors expect, especially the sambols. Ask for “sera nethuwa” (without chilli) or “sera adui” (less spicy) when ordering, and repeat it when the food arrives.'
+        },
+        {
+          question: 'Is it easy to be vegetarian or vegan in Sri Lanka?',
+          answer: 'Very easy. Most of a rice and curry is vegetables, dhal and coconut. Always ask whether sambols or vegetable curries contain Maldive fish, which is common and not considered meat by many cooks.'
+        },
+        {
+          question: 'Can you drink tap water in Sri Lanka?',
+          answer: 'No. Drink bottled or filtered water and use it to brush your teeth. Many guesthouses have refill stations, so carry a reusable bottle.'
+        },
+        {
+          question: 'How do I explain a food allergy in Sri Lanka?',
+          answer: 'Carry a card or phone image in Sinhala and English naming the allergen and stating it makes you seriously ill. Show it before ordering to the person cooking, and ask specifically about hidden ingredients like Maldive fish and cashew.'
+        }
+      ]
     }
   },
 
   // 17
   {
-    id: 'partner-spotlight-galle-fort-food-walks',
-    title: 'NEW PARTNER! - Galle Fort Food Walks',
+    id: 'partner-spotlight-mellow-bay-living-weligama',
+    title: 'NEW PARTNER! - Mellow Bay Living: Beach Coworking & Coliving in Weligama',
     category: 'Partner Spotlights',
     date: 'April 10, 2026',
     readTime: '4 min read',
     author: 'Macka',
-    excerpt: 'Seven kitchens, eight guests, and a guide from Galle who orders for you — the first-evening walk we recommend to almost everyone.',
+    excerpt: 'A beachfront coworking space, hostel and coliving house in Weligama: a real desk with a monitor, fibre Wi-Fi, a private beach, and surf when the laptop closes.',
     visualType: 'laptop-mockup',
     tileConfig: {
       bgColor: '#f2ece5',
       textColor: '#292522',
       badgeText: 'NEW!',
       badgeColor: '#1c1c1c',
-      headlineText: 'Galle Food Walks',
-      scriptSubtitle: 'Galle, Sri Lanka',
-      mockupImage: 'https://images.unsplash.com/photo-1744330763023-f9ea3fd4fe2b?auto=format&fit=crop&w=800&q=80',
+      headlineText: 'Mellow Bay Living',
+      scriptSubtitle: 'Weligama, Sri Lanka',
+      mockupImage: 'https://images.unsplash.com/photo-1771670050629-122322b3081a?auto=format&fit=crop&w=800&q=80',
     },
     content: {
+      summary: 'Mellow Bay Living is a beachfront coworking space, hostel and coliving house in Pelena, Weligama, on Sri Lanka’s south coast. It has an air-conditioned coworking room with desks, monitors and fibre Wi-Fi on day, weekly and monthly passes, sea-view private rooms, a family suite and dorms, a private beach, yoga, and surf packages from €239 a week.',
       introduction: [
-        '[Galle Fort Food Walks](https://gallefortfoodwalks.lk) run three-hour evening walks through the Fort and the market town beyond the ramparts, for groups of no more than eight, led by guides who grew up in Galle. Take it on your first evening and it changes every meal for the rest of your trip: you learn what to point at, how hot “not spicy” really is, how to eat with your hand, and which of the seven stops to come back to alone.',
-        'We recommend it to almost everyone who writes to us, and we have never had anyone say it was not worth the evening.'
+        'The honest problem with working remotely from a beach in Sri Lanka is that the beach is rarely where the work happens. Café Wi-Fi drops, the table is too low, the power goes out in the afternoon and the laptop overheats in the sun. [Mellow Bay Living](https://mellowbayliving.com/) is built around fixing that: a beachfront house in Weligama where the desk, the room and the sea are all in the same place.',
+        'We are glad to feature it as a partner, because it is the place we send readers who ask where to base a month of remote work on the south coast.'
       ],
       steps: [
         {
-          title: 'How the Evening Runs',
-          description: 'You meet at the clocktower at five, as the heat goes out of the day, and walk out through the Main Gate into the town where Galle actually eats — the bakery counters, the spice market, the rice and curry places with steel trays and a lunchtime crowd that is just clearing. Then back inside the walls as the lights come on, through the lanes to a family kitchen for hoppers and a final stop on the ramparts for curd and treacle as the sun goes down. Seven tastings, none of them small, over about three hours and three kilometres of easy walking.'
+          title: 'The Coworking Room',
+          description: 'The workspace, run as Connect Co-Working Space, is a dedicated air-conditioned room with proper desks and monitors on a fibre connection, which is the setup you want for calls, not a sun lounger. Passes come by the day, the week and the month, so you can drop in from a guesthouse elsewhere in Weligama or live on site and walk downstairs to work.\n\nPower cuts still happen on the south coast. Ask about backup power for your specific dates before you commit to a month of client calls; it is a fair question anywhere in Sri Lanka.'
         },
         {
-          title: 'What the Evening Covers',
-          description: '• Three hours, seven tasting stops, small groups of eight\n• Short eats from a Fort bakery, and what each one is\n• The spice market beyond the walls: cinnamon, curry leaves, goraka, Maldive fish\n• A proper rice and curry, dish by dish, eaten by hand\n• Egg hoppers from a family griddle, with lunu miris and seeni sambol\n• Kottu roti, the sound and the meal\n• Curd and treacle on the ramparts at sunset\n• Mild and vegetarian routes on request; allergy-aware with notice'
+          title: 'Living There',
+          description: 'Mellow Bay is also a hostel and coliving house, so the choice of room is wide: private double rooms, a family suite, and custom-built cement bunk dorms, all air-conditioned, with private or shared bathrooms and sea views. There is a garden, a terrace over the water, shared lounges, a long communal table and yoga classes, and a private stretch of beach in front of the house. Free parking on site and an airport shuttle make arrival simple.'
         },
         {
-          title: 'Why It Works So Well on Night One',
-          description: 'The guide orders for you, explains everything, and answers the questions you did not know you had — why the dhal is different at lunch and dinner, which sambol goes with which hopper, what the word on the board means. By the end of the walk you have a vocabulary, a set of places you know are good, and the confidence to walk into a kade on your own the next day. That is a different trip from the one where you eat pizza on the beach road every night.'
+          title: 'Where It Is',
+          description: 'The house is on the main road at Pelena, at the Matara end of Weligama, a short walk from Weligama Bay itself. That puts you within minutes of the beginner surf on the bay, the reef breaks at Midigama, and Mirissa’s beaches and harbour. For getting around, [Hello Rent](https://hellorentsrilanka.com/) on the Weligama main road rents scooters by the day, which is the easiest way to move between the desk, the surf and dinner.'
         },
         {
-          title: 'Who We Recommend It For',
-          description: 'Everyone on their first visit, families with children old enough to walk three kilometres, anyone with a dietary restriction who wants to see how it is handled here, and returning visitors who never quite got past the tourist menus. It is not a fine-dining event and it is not a bar crawl; it is a walk through a town at the hour it comes alive, with a lot of very good food.'
-        },
-        {
-          title: 'Booking and Prices',
-          description: 'Book directly on their site, where they list availability by date. The walk runs most evenings in season and a few evenings a week through the monsoon months, and it goes ahead in light rain — the Fort is lovely wet. Expect somewhere around USD 35-45 per person with all the food included; children under twelve are roughly half. Groups fill a few days ahead in January and February.'
+          title: 'Work Mornings, Surf Evenings',
+          description: 'Mellow Bay pairs stays with coaching from [Soul Surfer Camp](https://soulsurfercamp.com/), with beginner-focused lessons, video analysis and breakfast in weekly surf packages from €239 a week. The pattern that works for most remote workers here is to surf at dawn before the wind comes up, work through the heat of the day in the air-conditioned room, and be back on the beach for sunset.'
         },
         {
           title: 'Quick Reference',
           description: 'For your notes:',
-          codeSnippet: `Operator: Galle Fort Food Walks, Galle Fort
-Meet: the clocktower, 17:00
-Duration: 3 hours, 7 stops, about 3 km of walking
-Group: maximum 8 guests
-Includes: all food and a king coconut; drinks beyond that are extra
-Routes: standard, mild, vegetarian; allergy-aware with 24 hrs notice
-Runs: most evenings Nov-Apr, a few per week May-Oct
-Book: direct at gallefortfoodwalks.lk`
+          codeSnippet: `Name: Mellow Bay Living (coworking: Connect Co-Working Space)
+Where: Matara Road, Pelena, Weligama, Sri Lanka
+Workspace: air-conditioned room, desks, monitors, fibre Wi-Fi
+Passes: day, week and month
+Rooms: private doubles, family suite, cement bunk dorms, all a/c, sea views
+Also: private beach, garden terrace, yoga, communal table,
+      free parking, airport shuttle
+Surf: packages with Soul Surfer Camp from EUR 239 / week
+Book: mellowbayliving.com`
         }
       ],
       keyTakeaways: [
-        'Do it on night one, not night five.',
-        'Come hungry and skip lunch — seven stops is more food than it sounds.',
-        'Tell them about any allergy or a mild route when you book, so the kitchens know.'
+        'A real desk, a monitor and air-conditioning matter more than a sea view from the laptop.',
+        'Take a monthly pass if you are staying three weeks or more.',
+        'Surf at dawn, work at midday, beach at sunset. That is the Weligama remote-work rhythm.'
       ],
-      conclusion: 'Three hours on your first evening, and every meal after it is better. There are not many things on this coast we would say that about.'
+      conclusion: 'Weligama has become one of the best places in Asia to live and work for a month, because it pairs the easiest surf on the island with a slow, friendly town. Mellow Bay is where the working part stops being a compromise.',
+      faq: [
+        {
+          question: 'Is there a coworking space in Weligama?',
+          answer: 'Yes. Mellow Bay Living in Pelena, Weligama, has a beachfront coworking room with air-conditioning, desks, monitors and fibre Wi-Fi, available on day, weekly and monthly passes.'
+        },
+        {
+          question: 'Is Weligama good for digital nomads?',
+          answer: 'Weligama is one of the best bases in Sri Lanka for digital nomads: beginner-friendly surf, a relaxed town, coliving houses with proper workspaces, and easy access to Mirissa and Galle. The best season is December to April.'
+        },
+        {
+          question: 'Where can I stay and work remotely in Weligama?',
+          answer: 'Mellow Bay Living combines coliving rooms, a hostel and a coworking space in one beachfront house, with private doubles, a family suite and dorms, all air-conditioned with sea views.'
+        },
+        {
+          question: 'Can I surf and cowork in the same place in Sri Lanka?',
+          answer: 'Yes. Mellow Bay Living pairs its stays with Soul Surfer Camp coaching, with weekly surf packages from €239, so you can surf at dawn and work in the coworking room during the day.'
+        }
+      ]
     }
   },
 
@@ -1402,6 +1751,7 @@ Book: direct at gallefortfoodwalks.lk`
       headlineText: 'should you book a guided safari or go independent? (pros, cons & alternatives)',
     },
     content: {
+      summary: 'On Sri Lanka’s south coast, book guides only where they change the outcome: national park safaris (a licensed jeep is mandatory), whale boats, Sinharaja rainforest and a first-evening food walk. Travel the coast itself independently by train, bus, tuk-tuk or rented scooter. Two or three guided days inside an independent fortnight is the best value.',
       introduction: [
         'The guided-versus-independent question is usually framed as a personality test — are you an organised-tour person or a backpack person? — which is not very useful. Down South it is really a question about specific activities, because the answer flips depending on what you are doing that day. A local guide transforms a morning in Yala and adds nothing to a morning in Galle Fort.',
         'Here is an honest breakdown of where a guide earns their fee on this coast, where they do not, what each option costs, and the hybrid that suits most travellers who write to us.'
@@ -1409,7 +1759,7 @@ Book: direct at gallefortfoodwalks.lk`
       steps: [
         {
           title: 'Where Guided Genuinely Wins',
-          description: 'National parks, whale boats, rainforest and food. You cannot enter Yala or Udawalawe without a licensed jeep and driver anyway, so the real question there is tracker or no tracker — and a tracker who grew up beside the park, reads the alarm calls and knows where a leopard lies up at seven in the morning sees things you would drive straight past. [Yala Leopard Safaris](https://yalaleopardsafaris.lk) is the outfit we use for both parks.\n\nThe same logic holds on the water, where a marine guide turns an hour of open sea into an education, and at Sinharaja, where the forest is legally guided-only and the endemic birds are invisible without someone who knows the calls. And it holds for food: three hours with a guide on the first evening changes every meal that follows.'
+          description: 'National parks, whale boats, rainforest and food. You cannot enter Yala or Udawalawe without a licensed jeep and driver anyway, so the real question there is tracker or no tracker — and a tracker who grew up beside the park, reads the alarm calls and knows where a leopard lies up at seven in the morning sees things you would drive straight past. Ask any operator for a tracker, not just a driver.\n\nThe same logic holds on the water, where a marine guide turns an hour of open sea into an education, and at Sinharaja, where the forest is legally guided-only and the endemic birds are invisible without someone who knows the calls. It holds for food: three hours with a guide on the first evening changes every meal that follows. And it holds for surfing, where a coach in the water in your first week is worth far more than a guidebook; a camp like [The Surfer](https://www.thesurferweligama.com/en) in Weligama keeps it to four students per coach.'
         },
         {
           title: 'Where Independent Wins',
@@ -1442,7 +1792,7 @@ THE HYBRID (independent coast + two or three guided days)
         },
         {
           title: 'The Alternatives in Between',
-          description: 'There is a middle ground that gets overlooked. A car and driver for a single day — roughly USD 60-90 including fuel — solves the day when you move base with luggage or want to reach Sinharaja, without committing to a driver for the whole trip. Half-day local guides can be hired through most guesthouses for a temple visit or a village walk at a few thousand rupees. And community tourism projects like the turtle watch at Rekawa are guided by definition and worth every rupee. None of these lock you into anything.'
+          description: 'There is a middle ground that gets overlooked. A car and driver for a single day — roughly USD 60-90 including fuel — solves the day when you move base with luggage or want to reach Sinharaja, without committing to a driver for the whole trip. If you are comfortable driving, self-drive is cheaper still: [Hello Rent](https://hellorentsrilanka.com/) in Weligama rents cars, tuk-tuks and scooters, delivers to your hotel, and arranges the Sri Lankan permit. Half-day local guides can be hired through most guesthouses for a temple visit or a village walk at a few thousand rupees. And community tourism projects like the turtle watch at Rekawa are guided by definition and worth every rupee. None of these lock you into anything.'
         },
         {
           title: 'How to Judge Any Guided Offer',
@@ -1452,16 +1802,17 @@ THE HYBRID (independent coast + two or three guided days)
           title: 'A Fortnight, Shaped This Way',
           description: 'What the hybrid looks like on the calendar:',
           codeSnippet: `Independent   Colombo to Galle by train, 3 nights in the Fort
-Guided        Evening 1: food walk with Galle Fort Food Walks
-Independent   Dalawella, tea estate, bus to Ahangama, surf, 4 nights
-Guided        Dawn whale boat with Mirissa Blue Whale Tours
-Independent   Hiriketiya, 4 nights, lessons booked on the sand
+Guided        Evening 1: small-group food walk in the Fort
+Independent   Dalawella, tea estate, bus to Weligama, 4 nights
+Guided        Surf coaching in Weligama, dawn sessions
+Guided        Dawn whale boat from Mirissa harbour
+Independent   Hiriketiya, 4 nights, scooter for the bays
 Car + driver  One day: move to Tissamaharama with luggage
-Guided        Yala dawn drive with Yala Leopard Safaris
+Guided        Yala dawn drive with a tracker
 Independent   Tangalle, 2 nights, Rekawa turtle watch one evening
 Car + driver  Expressway to the airport
 
-Guided days: 3 of 14. Cost of guiding: under USD 250 per person.`
+Guided days: 3-4 of 14. Cost of guiding: roughly USD 250-350 per person.`
         }
       ],
       keyTakeaways: [
@@ -1470,7 +1821,25 @@ Guided days: 3 of 14. Cost of guiding: under USD 250 per person.`
         'Book the guided days direct with the operator, not through a driver or a hotel desk.',
         'A car and driver for one day solves the luggage problem without a two-week commitment.'
       ],
-      conclusion: 'You do not have to choose a personality. Walk the coast on your own terms, and hand three mornings to people who know a park, a sea and a kitchen better than you ever could. That is the trip most people are actually looking for.'
+      conclusion: 'You do not have to choose a personality. Walk the coast on your own terms, and hand three mornings to people who know a park, a sea and a kitchen better than you ever could. That is the trip most people are actually looking for.',
+      faq: [
+        {
+          question: 'Do you need a guide for a safari in Sri Lanka?',
+          answer: 'Yes. You cannot drive your own vehicle into Yala or Udawalawe; entry requires a licensed jeep and driver. The choice is whether to pay for a good tracker, which makes a big difference to leopard sightings.'
+        },
+        {
+          question: 'Is it easy to travel Sri Lanka’s south coast independently?',
+          answer: 'Yes. The coast is compact, English is widely spoken, and the train, buses, PickMe tuk-tuks and rental scooters connect every town. Most travellers only need guides for the parks, whale boats and rainforest.'
+        },
+        {
+          question: 'Is a private driver worth it in Sri Lanka?',
+          answer: 'A driver for the whole trip costs roughly USD 80-150 a day and suits short, packed itineraries or families. On the south coast, hiring a car and driver just for moving days is usually better value.'
+        },
+        {
+          question: 'Can I self-drive in Sri Lanka instead of hiring a driver?',
+          answer: 'Yes, if you have a government-issued International Driving Permit and a Sri Lankan permit endorsed on it. Rental companies such as Hello Rent in Weligama can arrange the permit and deliver the car.'
+        }
+      ]
     }
   },
 ];

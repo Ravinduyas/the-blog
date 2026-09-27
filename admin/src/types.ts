@@ -52,11 +52,18 @@ export interface PostStep {
   tip?: string;
 }
 
+export interface PostFaq {
+  question: string;
+  answer: string;
+}
+
 export interface PostContent {
+  summary?: string;
   introduction: string[];
   steps: PostStep[];
   keyTakeaways: string[];
   conclusion?: string;
+  faq: PostFaq[];
 }
 
 /** A post exactly as the admin API stores it. */

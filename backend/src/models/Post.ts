@@ -52,10 +52,12 @@ export interface PostDocument extends Document {
     partnerName?: string;
   };
   content: {
+    summary?: string;
     introduction: string[];
     steps: { title: string; description: string; codeSnippet?: string; tip?: string }[];
     keyTakeaways: string[];
     conclusion?: string;
+    faq: { question: string; answer: string }[];
   };
   status: PostStatus;
   publishedAt?: Date;
@@ -95,12 +97,22 @@ const tileConfigSchema = new Schema(
   { _id: false }
 );
 
+const faqSchema = new Schema(
+  {
+    question: { type: String, required: true, trim: true },
+    answer: { type: String, required: true },
+  },
+  { _id: false }
+);
+
 const contentSchema = new Schema(
   {
+    summary: { type: String },
     introduction: { type: [String], default: [] },
     steps: { type: [stepSchema], default: [] },
     keyTakeaways: { type: [String], default: [] },
     conclusion: { type: String },
+    faq: { type: [faqSchema], default: [] },
   },
   { _id: false }
 );
@@ -162,12 +174,14 @@ export function toPublicPost(post: PostDocument) {
     ...(post.heroImage ? { heroImage: post.heroImage } : {}),
     tileConfig: stripEmpty(post.tileConfig),
     content: {
+      ...(post.content?.summary ? { summary: post.content.summary } : {}),
       introduction: post.content?.introduction ?? [],
       ...(post.content?.steps?.length ? { steps: post.content.steps.map(stripEmpty) } : {}),
       ...(post.content?.keyTakeaways?.length
         ? { keyTakeaways: post.content.keyTakeaways }
         : {}),
       ...(post.content?.conclusion ? { conclusion: post.content.conclusion } : {}),
+      ...(post.content?.faq?.length ? { faq: post.content.faq.map(stripEmpty) } : {}),
     },
   };
 }

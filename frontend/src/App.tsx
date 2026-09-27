@@ -4,16 +4,15 @@ import { FeaturedHero } from './components/FeaturedHero';
 import { ActiveFilters } from './components/ActiveFilters';
 import { BlogCard } from './components/BlogCard';
 import { Sidebar } from './components/Sidebar';
-import { PostModal } from './components/PostModal';
-import { FreeTrainingModal } from './components/FreeTrainingModal';
+import { PostModal, PLANNING_GUIDE_ID } from './components/PostModal';
 import { ShopDrawer } from './components/ShopDrawer';
 import { PartnerPreviewModal } from './components/PartnerPreviewModal';
 import { ContactModal } from './components/ContactModal';
-import { InstagramModal } from './components/InstagramModal';
 import { Footer } from './components/Footer';
 import { BLOG_POSTS } from './data/blogPosts';
 import { fetchPosts } from './lib/api';
-import { BlogPost, CategoryType, PartnerListing, InstagramPost } from './types';
+import { applyArticleSeo } from './lib/seo';
+import { BlogPost, CategoryType, PartnerListing } from './types';
 
 /** How many articles the hero will rotate through. Matches the backend's cap. */
 const HERO_SLOTS = 3;
@@ -35,16 +34,19 @@ export default function App() {
 
   // Modal / Drawer States
   const [activePost, setActivePost] = useState<BlogPost | null>(null);
-  const [trainingOpen, setTrainingOpen] = useState<boolean>(false);
   const [contactOpen, setContactOpen] = useState<boolean>(false);
   const [shopOpen, setShopOpen] = useState<boolean>(false);
   const [previewPartner, setPreviewPartner] = useState<PartnerListing | null>(null);
-  const [activeInsta, setActiveInsta] = useState<InstagramPost | null>(null);
-  const [savedCount, setSavedCount] = useState<number>(0);
 
   // Articles come from the API so the admin panel controls what is live. The
   // bundled copy seeds the first paint and stands in if the API is unreachable.
   const [posts, setPosts] = useState<BlogPost[]>(BLOG_POSTS);
+
+  // Every "trip planner" button opens the planning guide article.
+  const openPlanningGuide = () => {
+    const guide = posts.find((post) => post.id === PLANNING_GUIDE_ID);
+    if (guide) setActivePost(guide);
+  };
 
   useEffect(() => {
     const controller = new AbortController();
@@ -67,6 +69,12 @@ export default function App() {
 
     return () => controller.abort();
   }, []);
+
+  // Give the open article its own URL, title, description and structured data,
+  // so every ?post=<slug> address reads as a standalone article page.
+  useEffect(() => {
+    applyArticleSeo(activePost);
+  }, [activePost]);
 
   // Filtered Posts Logic
   const filteredPosts = useMemo(() => {
@@ -127,19 +135,14 @@ export default function App() {
     };
   }, []);
 
-  const handleSaveToTrip = (partner: PartnerListing) => {
-    setSavedCount((prev) => prev + 1);
-  };
-
   return (
     <div className="min-h-screen bg-[#faf8f5] flex flex-col font-sans-clean text-[#2c2c2c] antialiased selection:bg-[#ecdcd3]">
       {/* 1. Header (Black Top Bar + Main Navigation) */}
       <Header
-        onOpenTraining={() => setTrainingOpen(true)}
+        onOpenTraining={openPlanningGuide}
         onOpenContact={() => setContactOpen(true)}
         onOpenShop={() => setShopOpen(true)}
         onSelectCategory={(cat) => setSelectedCategory(cat as CategoryType)}
-        savedCount={savedCount}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         selectedCategory={selectedCategory}
@@ -208,9 +211,9 @@ export default function App() {
               selectedCategory={selectedCategory}
               onCategoryChange={setSelectedCategory}
               categories={CATEGORIES}
-              onOpenTraining={() => setTrainingOpen(true)}
+              onOpenTraining={openPlanningGuide}
               onOpenPartnerPreview={(partner) => setPreviewPartner(partner)}
-              onOpenInstagram={(insta) => setActiveInsta(insta)}
+              onOpenPartners={() => setShopOpen(true)}
             />
           </aside>
         </div>
@@ -218,10 +221,9 @@ export default function App() {
 
       {/* 4. Footer */}
       <Footer
-        onOpenTraining={() => setTrainingOpen(true)}
+        onOpenTraining={openPlanningGuide}
         onOpenContact={() => setContactOpen(true)}
         onOpenShop={() => setShopOpen(true)}
-        onSelectCategory={(cat) => setSelectedCategory(cat as CategoryType)}
       />
 
       {/* 5. Modals & Drawers */}
@@ -230,16 +232,10 @@ export default function App() {
         post={activePost}
         onClose={() => setActivePost(null)}
         onSelectCategory={(cat) => setSelectedCategory(cat as CategoryType)}
-        onOpenTraining={() => setTrainingOpen(true)}
+        onOpenTraining={openPlanningGuide}
       />
 
-      {/* Free Trip Planner Modal */}
-      <FreeTrainingModal
-        isOpen={trainingOpen}
-        onClose={() => setTrainingOpen(false)}
-      />
-
-      {/* Featured Partners Slide-over Drawer */}
+      {/* Partners Slide-over Drawer */}
       <ShopDrawer
         isOpen={shopOpen}
         onClose={() => setShopOpen(false)}
@@ -247,26 +243,18 @@ export default function App() {
           setShopOpen(false);
           setPreviewPartner(partner);
         }}
-        onSaveToTrip={handleSaveToTrip}
       />
 
-      {/* Partner Live Preview Modal */}
+      {/* Partner Details Modal */}
       <PartnerPreviewModal
         partner={previewPartner}
         onClose={() => setPreviewPartner(null)}
-        onSaveToTrip={handleSaveToTrip}
       />
 
-      {/* Contact & Support Modal */}
+      {/* Contact Modal */}
       <ContactModal
         isOpen={contactOpen}
         onClose={() => setContactOpen(false)}
-      />
-
-      {/* Instagram Lightbox Modal */}
-      <InstagramModal
-        post={activeInsta}
-        onClose={() => setActiveInsta(null)}
       />
     </div>
   );

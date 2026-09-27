@@ -48,9 +48,13 @@ export interface BlogPost {
   };
 
   // Full article content.
-  // Body text supports inline markdown-style links — [label](https://partner-site.com) —
+  // Body text supports inline markdown-style links — [label](https://hellorentsrilanka.com/) —
   // which is how partner businesses earn their backlink from within an article.
   content: {
+    // A 40-60 word direct answer to the question the title asks. Shown first in
+    // the article and used as the page description, so search and AI answer
+    // engines can lift it verbatim.
+    summary?: string;
     introduction: string[];
     steps?: {
       title: string;
@@ -60,6 +64,9 @@ export interface BlogPost {
     }[];
     keyTakeaways?: string[];
     conclusion?: string;
+    // Question-and-answer pairs rendered on the page and emitted as FAQPage
+    // structured data. Answers support the same inline [label](url) links.
+    faq?: { question: string; answer: string }[];
   };
 }
 
@@ -71,22 +78,12 @@ export interface PartnerListing {
   website: string;
   price: number;
   priceUnit: string;
+  /** Currency symbol shown before the price. Defaults to "$". */
+  currency?: string;
   bestFor: string;
   description: string;
   imageUrl: string;
   accentColor: string;
   badge?: string;
   features: string[];
-}
-
-export interface InstagramPost {
-  id: string;
-  type: 'quote' | 'image' | 'pattern' | 'graphic';
-  imageUrl?: string;
-  caption: string;
-  quote?: string;
-  authorHandle: string;
-  likes: number;
-  bgColor?: string;
-  textColor?: string;
 }

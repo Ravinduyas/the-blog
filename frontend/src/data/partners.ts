@@ -1,4 +1,4 @@
-import { PartnerListing, InstagramPost } from '../types';
+import { PartnerListing } from '../types';
 
 /**
  * Down South partner businesses featured across the blog.
@@ -7,119 +7,83 @@ import { PartnerListing, InstagramPost } from '../types';
  */
 export const PARTNER_LISTINGS: PartnerListing[] = [
   {
-    id: 'mirissa-blue-whale-tours',
-    name: 'Mirissa Blue Whale Tours',
-    subtitle: 'Whale & Dolphin Boat Trips',
-    location: 'MIRISSA, SRI LANKA',
-    website: 'https://mirissabluewhale.lk',
-    price: 45,
-    priceUnit: 'per person',
-    bestFor: 'Families, first-timers and anyone hoping for blue whales',
-    description: 'Dawn departures from Mirissa harbour with a marine guide on board, run to whale-watching guidelines rather than chasing pods.',
-    imageUrl: 'https://images.unsplash.com/photo-1693307379048-890167f73704?auto=format&fit=crop&w=800&q=80',
+    id: 'the-surfer-weligama',
+    name: 'The Surfer',
+    subtitle: 'Surf Camps & ISA-Certified Lessons',
+    location: 'WELIGAMA, SRI LANKA',
+    website: 'https://www.thesurferweligama.com/en',
+    price: 290,
+    currency: '€',
+    priceUnit: 'per week, stay + surf',
+    bestFor: 'First-timers through to advanced surfers who want a social camp on Weligama Bay',
+    description: 'Locally owned Weligama surf camp with three camps, ISA-certified coaches at a maximum of four students each, video analysis, yoga and daily breakfast. Six-time Tripadvisor Travellers’ Choice winner.',
+    imageUrl: 'https://images.unsplash.com/photo-1607429289259-456053385f53?auto=format&fit=crop&w=800&q=80',
     accentColor: '#c59e9b',
     badge: 'READER FAVOURITE',
-    features: ['06:30 Dawn Departure', 'Marine Guide Aboard', 'Breakfast & Water Included', 'Sighting Rebook Promise']
+    features: ['Max 4 Students per Coach', 'Video Analysis', 'Boards & Rash Guards', 'Season Oct to Apr']
   },
   {
-    id: 'hiriketiya-surf-house',
-    name: 'Hiriketiya Surf House',
-    subtitle: 'Surf Stay & Beginner Lessons',
-    location: 'DIKWELLA, SRI LANKA',
-    website: 'https://hiriketiyasurfhouse.lk',
-    price: 65,
-    priceUnit: 'per night',
-    bestFor: 'Beginner surfers and slow travellers staying a week or more',
-    description: 'Eight rooms two minutes from Hiriketiya bay, with dawn lessons on the mellow left and boards to borrow all day.',
-    imageUrl: 'https://images.unsplash.com/photo-1690896066314-7f0eee7b8ddb?auto=format&fit=crop&w=800&q=80',
+    id: 'soul-surfer-camp',
+    name: 'Soul Surfer Camp',
+    subtitle: 'Boutique Surf & Yoga Camp',
+    location: 'WELIGAMA, SRI LANKA',
+    website: 'https://soulsurfercamp.com/',
+    price: 390,
+    currency: '€',
+    priceUnit: 'per week, stay + surf',
+    bestFor: 'Surfers who want a smaller camp with daily yoga and a pool to come back to',
+    description: 'The Surfer’s boutique camp in Paranakade, twenty seconds from Weligama beach: rooftop infinity pool, sea-view restaurant, sunrise and sunset yoga, and surf packages from six to eleven lessons a week.',
+    imageUrl: 'https://images.unsplash.com/photo-1569970287880-b421ed294ab7?auto=format&fit=crop&w=800&q=80',
     accentColor: '#8c5855',
     badge: 'NEW PARTNER',
-    features: ['8 Rooms Only', '2 Min to Hiri Bay', 'Boards & Lessons Included', 'Breakfast on the Deck']
+    features: ['20 Seconds to the Beach', 'Rooftop Infinity Pool', 'Surf & Yoga Packages', 'Dorms & Ensuite Rooms']
   },
   {
-    id: 'galle-fort-food-walks',
-    name: 'Galle Fort Food Walks',
-    subtitle: 'Evening Food & Spice Walks',
-    location: 'GALLE, SRI LANKA',
-    website: 'https://gallefortfoodwalks.lk',
-    price: 35,
-    priceUnit: 'per person',
-    bestFor: 'Curious eaters and anyone unsure how to order rice and curry',
-    description: 'Three hours through the Fort and the market beyond the ramparts, stopping at seven kitchens most visitors walk straight past.',
-    imageUrl: 'https://images.unsplash.com/photo-1742281095650-dd3c50c08772?auto=format&fit=crop&w=800&q=80',
+    id: 'mellow-bay-living',
+    name: 'Mellow Bay Living',
+    subtitle: 'Beach Coworking & Coliving',
+    location: 'PELENA, WELIGAMA, SRI LANKA',
+    website: 'https://mellowbayliving.com/',
+    price: 239,
+    currency: '€',
+    priceUnit: 'per week, surf stay',
+    bestFor: 'Remote workers who want fibre Wi-Fi, a real desk and the sea in the same place',
+    description: 'A beachfront coworking space, hostel and coliving house on its own stretch of sand in Pelena, a short walk from Weligama Bay. Air-conditioned cowork room with desks and monitors, day, week and month passes.',
+    imageUrl: 'https://images.unsplash.com/photo-1771670050629-122322b3081a?auto=format&fit=crop&w=800&q=80',
     accentColor: '#b5684d',
-    badge: 'BOOKS OUT FAST',
-    features: ['7 Tasting Stops', 'Small Groups of 8', 'Mild Route on Request', 'Local Guides from Galle']
+    badge: 'FOR REMOTE WORKERS',
+    features: ['Fibre Wi-Fi & Monitors', 'Day, Week & Month Passes', 'Private Beach', 'Sea-View Rooms & Dorms']
   },
   {
-    id: 'yala-leopard-safaris',
-    name: 'Yala Leopard Safaris',
-    subtitle: 'Jeep Safaris — Yala & Udawalawe',
-    location: 'TISSAMAHARAMA, SRI LANKA',
-    website: 'https://yalaleopardsafaris.lk',
-    price: 70,
-    priceUnit: 'per person',
-    bestFor: 'Wildlife watchers who would rather wait quietly than race between sightings',
-    description: 'Locally owned jeeps with trackers who grew up beside the park, running half-day and full-day drives in Yala and Udawalawe.',
-    imageUrl: 'https://images.unsplash.com/photo-1566650576880-6740b03eaad1?auto=format&fit=crop&w=800&q=80',
+    id: 'hello-rent-sri-lanka',
+    name: 'Hello Rent',
+    subtitle: 'Scooter, Tuk-Tuk & Car Rental',
+    location: 'WELIGAMA, SRI LANKA',
+    website: 'https://hellorentsrilanka.com/',
+    price: 5,
+    currency: '€',
+    priceUnit: 'per day, scooters',
+    bestFor: 'Anyone who wants to explore the south coast on their own wheels, legally',
+    description: 'Automatic scooters, manual bikes, tuk-tuks and air-conditioned cars from a shop on the main road through Weligama. Helmet with every bike, delivery to your hotel or the airport, and the Sri Lankan driving permit arranged for you.',
+    imageUrl: 'https://images.unsplash.com/photo-1744298350844-e628a07e8175?auto=format&fit=crop&w=800&q=80',
     accentColor: '#d6cbbe',
     badge: 'LOCALLY OWNED',
-    features: ['Resident Trackers', 'Half & Full-Day Drives', 'Park Fees Included', 'Max 6 per Jeep']
-  }
-];
-
-export const INSTAGRAM_POSTS: InstagramPost[] = [
-  {
-    id: 'insta-1',
-    type: 'quote',
-    caption: 'Saving this one for your next Down South plan ✨ #srilanka #southcoast #slowtravel',
-    quote: 'Two beaches done slowly beat six beaches done from a van window.',
-    authorHandle: '@downsouthlanka',
-    likes: 342,
-    bgColor: '#e3ece8',
-    textColor: '#29433b'
+    features: ['Helmet Included', 'Hotel & Airport Delivery', 'Driving Permit Arranged', 'Scooters, Tuk-Tuks & Cars']
   },
   {
-    id: 'insta-2',
-    type: 'image',
-    imageUrl: 'https://images.unsplash.com/photo-1693307379048-890167f73704?auto=format&fit=crop&w=500&q=80',
-    caption: 'Mirissa harbour at 06:15, before the boats go out. Full whale-watching guide is on the blog 🐋',
-    authorHandle: '@downsouthlanka',
-    likes: 519
-  },
-  {
-    id: 'insta-3',
-    type: 'image',
-    imageUrl: 'https://images.unsplash.com/photo-1742281095650-dd3c50c08772?auto=format&fit=crop&w=500&q=80',
-    caption: 'Rice and curry on a banana leaf in Galle. Count the little dishes — that is the whole point 🍛',
-    authorHandle: '@downsouthlanka',
-    likes: 428
-  },
-  {
-    id: 'insta-4',
-    type: 'image',
-    imageUrl: 'https://images.unsplash.com/photo-1613693692851-204a395d0ec7?auto=format&fit=crop&w=500&q=80',
-    caption: 'Golden hour at Hiriketiya. The left is patient enough for your first week on a board 🏄',
-    authorHandle: '@downsouthlanka',
-    likes: 612
-  },
-  {
-    id: 'insta-5',
-    type: 'graphic',
-    caption: 'What a tuk-tuk, a king coconut and a Yala jeep should actually cost you 💡',
-    authorHandle: '@downsouthlanka',
-    likes: 830,
-    quote: 'down south prices, honestly',
-    bgColor: '#33373b',
-    textColor: '#f1f1f1'
-  },
-  {
-    id: 'insta-6',
-    type: 'pattern',
-    caption: 'New South Coast guides every week. Tell us where you are headed 🌴',
-    authorHandle: '@downsouthlanka',
-    likes: 489,
-    bgColor: '#f1e6df',
-    textColor: '#9b7161'
+    id: 'surfers-boat-party-mirissa',
+    name: 'Surfers Boat Party',
+    subtitle: 'Saturday Sunset Boat Party',
+    location: 'MIRISSA, SRI LANKA',
+    website: 'https://boatpartymirissa.com/',
+    price: 20,
+    currency: '€',
+    priceUnit: 'per ticket',
+    bestFor: 'Travellers who want one big social evening on the water',
+    description: 'A five-hour yacht party out of Mirissa harbour every Saturday: DJs, swim stops, unlimited refreshments and sunset past Coconut Tree Hill, Secret Beach and Parrot Rock. Running since 2018.',
+    imageUrl: 'https://images.unsplash.com/photo-1602867612779-3aaf54b425c2?auto=format&fit=crop&w=800&q=80',
+    accentColor: '#9aa7b3',
+    badge: 'SATURDAYS',
+    features: ['Every Saturday 15:00-20:00', 'DJ & Swim Stops', 'Unlimited Refreshments', 'Sunset Past Parrot Rock']
   }
 ];

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { X, ShoppingBag, Check, ExternalLink, ArrowRight, Eye } from 'lucide-react';
+import React from 'react';
+import { X, ExternalLink, Eye } from 'lucide-react';
 import { PartnerListing } from '../types';
 import { PARTNER_LISTINGS } from '../data/partners';
 import { motion, AnimatePresence } from 'motion/react';
@@ -8,24 +8,10 @@ interface ShopDrawerProps {
   isOpen: boolean;
   onClose: () => void;
   onSelectPartner: (partner: PartnerListing) => void;
-  onSaveToTrip: (partner: PartnerListing) => void;
 }
 
-export const ShopDrawer: React.FC<ShopDrawerProps> = ({
-  isOpen,
-  onClose,
-  onSelectPartner,
-  onSaveToTrip,
-}) => {
-  const [addedId, setAddedId] = useState<string | null>(null);
-
+export const ShopDrawer: React.FC<ShopDrawerProps> = ({ isOpen, onClose, onSelectPartner }) => {
   if (!isOpen) return null;
-
-  const handleAdd = (partner: PartnerListing) => {
-    onSaveToTrip(partner);
-    setAddedId(partner.id);
-    setTimeout(() => setAddedId(null), 1800);
-  };
 
   return (
     <AnimatePresence>
@@ -47,10 +33,10 @@ export const ShopDrawer: React.FC<ShopDrawerProps> = ({
           <div className="p-6 border-b border-[#ebdcd0] flex items-center justify-between bg-[#f6efe9]">
             <div>
               <span className="text-[11px] uppercase tracking-[0.2em] font-medium text-[#888]">
-                HANDPICKED DOWN SOUTH
+                WELIGAMA &amp; MIRISSA
               </span>
               <h3 className="font-serif-display text-2xl text-[#222]">
-                Our Down South Partners
+                Our South Coast Partners
               </h3>
             </div>
             <button
@@ -88,7 +74,7 @@ export const ShopDrawer: React.FC<ShopDrawerProps> = ({
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="bg-white/90 text-[#222] text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
                       <Eye className="w-3.5 h-3.5" />
-                      Quick Preview
+                      View Details
                     </span>
                   </div>
                 </div>
@@ -101,7 +87,7 @@ export const ShopDrawer: React.FC<ShopDrawerProps> = ({
                       <p className="text-xs text-[#777]">{partner.subtitle} · {partner.location}</p>
                     </div>
                     <span className="font-sans-clean font-semibold text-lg text-[#222]">
-                      <span className="text-sm font-normal text-[#777]">from </span>${partner.price}<span className="text-xs font-normal text-[#777]"> {partner.priceUnit}</span>
+                      <span className="text-sm font-normal text-[#777]">from </span>{partner.currency ?? '$'}{partner.price}<span className="text-xs font-normal text-[#777]"> {partner.priceUnit}</span>
                     </span>
                   </div>
 
@@ -116,22 +102,15 @@ export const ShopDrawer: React.FC<ShopDrawerProps> = ({
                     >
                       View Details
                     </button>
-                    <button
-                      onClick={() => handleAdd(partner)}
+                    <a
+                      href={partner.website}
+                      target="_blank"
+                      rel="noopener"
                       className="flex-1 py-2 text-xs bg-[#292929] hover:bg-black text-white font-medium transition-colors flex items-center justify-center gap-1.5"
                     >
-                      {addedId === partner.id ? (
-                        <>
-                          <Check className="w-3.5 h-3.5 text-emerald-400" />
-                          <span>Saved!</span>
-                        </>
-                      ) : (
-                        <>
-                          <ShoppingBag className="w-3.5 h-3.5" />
-                          <span>Save to Trip</span>
-                        </>
-                      )}
-                    </button>
+                      <span>Visit Website</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -139,20 +118,10 @@ export const ShopDrawer: React.FC<ShopDrawerProps> = ({
           </div>
 
           {/* Drawer Footer */}
-          <div className="p-6 border-t border-[#ebdcd0] bg-[#f6efe9] space-y-3">
-            <div className="flex items-center justify-between text-xs text-[#666]">
-              <span>Every partner is visited and vetted by our editors</span>
-              <span>Best Rates Booked Direct</span>
-            </div>
-            <button
-              onClick={() => {
-                alert('Your saved trip is ready! In a live deployment, this opens your saved partner list.');
-              }}
-              className="w-full bg-[#c57d71] hover:bg-[#b26e63] text-white text-xs font-semibold tracking-widest uppercase py-3.5 rounded-full transition-colors flex items-center justify-center gap-2 shadow-xs cursor-pointer"
-            >
-              <span>VIEW YOUR SAVED TRIP</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+          <div className="p-6 border-t border-[#ebdcd0] bg-[#f6efe9]">
+            <p className="text-xs text-[#666] text-center">
+              Prices are the partners’ published starting rates. Book on their own websites for the direct price.
+            </p>
           </div>
         </motion.div>
       </div>

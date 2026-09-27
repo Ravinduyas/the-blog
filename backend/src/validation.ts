@@ -23,6 +23,7 @@ export const tileConfigSchema = z.object({
 });
 
 export const contentSchema = z.object({
+  summary: z.string().max(600).optional(),
   introduction: z.array(z.string().min(1)).default([]),
   steps: z
     .array(
@@ -36,6 +37,14 @@ export const contentSchema = z.object({
     .default([]),
   keyTakeaways: z.array(z.string().min(1)).default([]),
   conclusion: z.string().optional(),
+  faq: z
+    .array(
+      z.object({
+        question: z.string().min(1, 'Each FAQ needs a question'),
+        answer: z.string().min(1, 'Each FAQ needs an answer'),
+      })
+    )
+    .default([]),
 });
 
 export const postInputSchema = z.object({

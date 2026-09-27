@@ -1,72 +1,54 @@
-import React, { useState } from 'react';
-import { Send, Instagram, Youtube, ArrowUp, Sparkles, Check, Globe } from 'lucide-react';
+import React from 'react';
+import { ArrowUp, ExternalLink } from 'lucide-react';
+import { PARTNER_LISTINGS } from '../data/partners';
 
 interface FooterProps {
   onOpenTraining: () => void;
   onOpenContact: () => void;
   onOpenShop: () => void;
-  onSelectCategory: (category: string) => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({
-  onOpenTraining,
-  onOpenContact,
-  onOpenShop,
-  onSelectCategory,
-}) => {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setSubscribed(true);
-    setTimeout(() => {
-      setEmail('');
-    }, 2000);
-  };
-
+export const Footer: React.FC<FooterProps> = ({ onOpenTraining, onOpenContact, onOpenShop }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <footer id="app-footer" className="w-full bg-[#f4ede6] border-t border-[#ebdcd0] mt-16 select-none">
-      {/* Newsletter Section */}
-      <div className="max-w-4xl mx-auto px-4 py-14 text-center space-y-4">
+      {/* Partners */}
+      <div className="max-w-5xl mx-auto px-4 py-14 text-center space-y-4">
         <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#c57d71]">
-          JOIN 40,000+ TRAVELLERS HEADED DOWN SOUTH
+          LOCALLY OWNED, BOOKED DIRECT
         </span>
         <h3 className="font-serif-display text-3xl sm:text-4xl text-[#222] font-normal">
-          South coast guides, surf and season updates & honest local advice
+          Our partners on Sri Lanka’s south coast
         </h3>
         <p className="text-sm text-[#666] max-w-md mx-auto">
-          One good email every Tuesday. No spam, no filler. Unsubscribe at any time.
+          The Weligama and Mirissa businesses we recommend throughout these guides.
         </p>
 
-        <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto pt-2">
-          <input
-            type="email"
-            placeholder="Enter your email address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="flex-1 bg-white text-sm px-4 py-3 rounded-full border border-[#d8cbbf] focus:outline-none focus:border-[#a88d7f]"
-          />
-          <button
-            type="submit"
-            className="bg-[#292929] hover:bg-black text-white text-xs font-semibold uppercase tracking-widest px-7 py-3 rounded-full transition-colors flex items-center justify-center gap-2 cursor-pointer"
-          >
-            {subscribed ? (
-              <>
-                <Check className="w-4 h-4 text-emerald-400" />
-                <span>Subscribed!</span>
-              </>
-            ) : (
-              <span>SUBSCRIBE</span>
-            )}
-          </button>
-        </form>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-4 text-left">
+          {PARTNER_LISTINGS.map((partner) => (
+            <li key={partner.id}>
+              <a
+                href={partner.website}
+                target="_blank"
+                rel="noopener"
+                className="flex h-full items-start justify-between gap-3 rounded-xs border border-[#e2d5cb] bg-white px-4 py-3 hover:border-[#c57d71] transition-colors group"
+              >
+                <span>
+                  <span className="block text-sm font-semibold text-[#222] group-hover:text-[#9e5d50]">
+                    {partner.name}
+                  </span>
+                  <span className="block text-xs text-[#777]">
+                    {partner.subtitle} · {partner.location.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase())}
+                  </span>
+                </span>
+                <ExternalLink className="mt-1 h-3.5 w-3.5 shrink-0 text-[#aaa] group-hover:text-[#c57d71]" />
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Main Footer Links */}
@@ -84,10 +66,10 @@ export const Footer: React.FC<FooterProps> = ({
             Our Partners
           </button>
           <button onClick={onOpenTraining} className="hover:text-black transition-colors cursor-pointer">
-            Free Trip Guide
+            Trip Planning Guide
           </button>
           <button onClick={onOpenContact} className="hover:text-black transition-colors cursor-pointer">
-            Contact & Support
+            Contact
           </button>
           <button
             onClick={scrollToTop}

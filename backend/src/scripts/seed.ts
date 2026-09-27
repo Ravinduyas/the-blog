@@ -27,10 +27,12 @@ interface SeedPost {
   heroImage?: string;
   tileConfig: Record<string, unknown>;
   content: {
+    summary?: string;
     introduction?: string[];
     steps?: { title: string; description: string; codeSnippet?: string; tip?: string }[];
     keyTakeaways?: string[];
     conclusion?: string;
+    faq?: { question: string; answer: string }[];
   };
 }
 
@@ -83,10 +85,12 @@ async function run(): Promise<void> {
       heroImage: raw.heroImage,
       tileConfig: raw.tileConfig,
       content: {
+        summary: raw.content?.summary,
         introduction: raw.content?.introduction ?? [],
         steps: raw.content?.steps ?? [],
         keyTakeaways: raw.content?.keyTakeaways ?? [],
         conclusion: raw.content?.conclusion,
+        faq: raw.content?.faq ?? [],
       },
       status: 'published' as const,
       publishedAt: existing?.publishedAt ?? new Date(),

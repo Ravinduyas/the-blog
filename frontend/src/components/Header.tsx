@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Menu, X, Sparkles, Mail, Search, ChevronDown } from 'lucide-react';
+import { Menu, X, Sparkles, Mail, Search, ChevronDown } from 'lucide-react';
 import { CategoryType } from '../types';
 
 interface HeaderProps {
@@ -7,7 +7,6 @@ interface HeaderProps {
   onOpenContact: () => void;
   onOpenShop: () => void;
   onSelectCategory: (category: string) => void;
-  savedCount: number;
   searchQuery: string;
   onSearchChange: (query: string) => void;
   selectedCategory: string;
@@ -19,7 +18,6 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenContact,
   onOpenShop,
   onSelectCategory,
-  savedCount,
   searchQuery,
   onSearchChange,
   selectedCategory,
@@ -37,15 +35,15 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={onOpenTraining}
             className="hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
           >
-            <span>free trip planner</span>
+            <span>trip planner</span>
           </button>
           <span className="text-[#555] font-light">|</span>
           <button
-            id="top-bar-support-btn"
-            onClick={onOpenContact}
+            id="top-bar-partners-btn"
+            onClick={onOpenShop}
             className="hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
           >
-            <span>support</span>
+            <span>our partners</span>
           </button>
           <span className="text-[#555] font-light">|</span>
           <button
@@ -153,37 +151,10 @@ export const Header: React.FC<HeaderProps> = ({
             blog
           </button>
 
-          {/* Cart Icon */}
-          <button
-            id="nav-cart-btn"
-            onClick={onOpenShop}
-            className="relative p-1.5 text-[#555] hover:text-[#111] transition-colors cursor-pointer shrink-0"
-            aria-label="View your saved trip"
-          >
-            <ShoppingBag className="w-[18px] h-[18px] stroke-[1.5]" />
-            {savedCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-[#c57d71] text-white text-[10px] font-semibold w-4 h-4 rounded-full flex items-center justify-center animate-pulse">
-                {savedCount}
-              </span>
-            )}
-          </button>
         </nav>
 
         {/* Mobile Hamburger Toggle */}
         <div className="flex items-center md:hidden gap-3">
-          <button
-            id="mobile-cart-btn"
-            onClick={onOpenShop}
-            className="relative p-1.5 text-[#444]"
-            aria-label="Saved trip"
-          >
-            <ShoppingBag className="w-[18px] h-[18px] stroke-[1.5]" />
-            {savedCount > 0 && (
-              <span className="absolute 0 top-0 right-0 bg-[#c57d71] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
-                {savedCount}
-              </span>
-            )}
-          </button>
           <button
             id="mobile-menu-toggle-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -250,7 +221,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
             <button
               onClick={() => {
-                onSelectCategory('Destination Guides');
+                onSelectCategory('Wildlife & Safari');
                 setMobileMenuOpen(false);
               }}
               className="text-left text-[#333] hover:text-[#c57d71] py-1"
@@ -276,7 +247,7 @@ export const Header: React.FC<HeaderProps> = ({
               className="text-left py-1 text-[#222] font-medium flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4 text-[#c57d71]" />
-              Free Guide: Plan Your Down South Trip
+              Trip Planning Guide
             </button>
             <button
               onClick={() => {
@@ -286,7 +257,7 @@ export const Header: React.FC<HeaderProps> = ({
               className="text-left py-1 flex items-center gap-2"
             >
               <Mail className="w-4 h-4" />
-              Contact & Support
+              Contact
             </button>
           </div>
         </div>

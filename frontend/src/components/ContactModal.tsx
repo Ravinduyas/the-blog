@@ -1,29 +1,20 @@
-import React, { useState } from 'react';
-import { X, Send, CheckCircle2, MessageCircle, HelpCircle, Mail } from 'lucide-react';
+import React from 'react';
+import { X, ExternalLink, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { PARTNER_LISTINGS } from '../data/partners';
 
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+/** Real contact routes only: each partner's own website, plus Hello Rent's WhatsApp. */
+const WHATSAPP: Record<string, string> = {
+  'hello-rent-sri-lanka': 'https://wa.me/94767073388',
+};
+
 export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
-  const [submitted, setSubmitted] = useState(false);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('Destination Question');
-  const [message, setMessage] = useState('');
-
   if (!isOpen) return null;
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email || !message) return;
-    setSubmitted(true);
-    setTimeout(() => {
-      // reset after feedback
-    }, 1000);
-  };
 
   return (
     <AnimatePresence>
@@ -52,104 +43,49 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
             <span className="text-[11px] tracking-[0.2em] uppercase text-[#c57d71] font-semibold block mb-1">
               DOWN SOUTH CEYLON
             </span>
-            <h2 className="font-serif-display text-2xl sm:text-3xl font-normal">
-              Support & Contact
-            </h2>
+            <h2 className="font-serif-display text-2xl sm:text-3xl font-normal">Contact &amp; Bookings</h2>
             <p className="text-xs text-[#bbb] mt-1">
-Have a question about the south coast, want to suggest a place, or run a Down South business you would like us to feature? Drop us a note!
+              Booking a surf week, a desk, a scooter or the Saturday boat? Contact our partners directly;
+              they answer faster than we can and you get the direct-booking price.
             </p>
           </div>
 
-          {/* Form */}
-          <div className="p-6 sm:p-8">
-            {submitted ? (
-              <div className="text-center py-8 space-y-3">
-                <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-                  <CheckCircle2 className="w-8 h-8" />
+          {/* Partner contacts */}
+          <ul className="p-6 sm:p-8 space-y-3">
+            {PARTNER_LISTINGS.map((partner) => (
+              <li
+                key={partner.id}
+                className="flex items-center justify-between gap-3 rounded-xs border border-[#ebdcd0] bg-white px-4 py-3"
+              >
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold text-[#222]">{partner.name}</p>
+                  <p className="text-xs text-[#777] truncate">{partner.subtitle}</p>
                 </div>
-                <h3 className="font-serif-display text-2xl text-[#222]">
-                  Message Received!
-                </h3>
-                <p className="text-xs text-[#666] max-w-xs mx-auto">
-Thanks for reaching out, {name || 'there'}! Macka or one of our editors will get back to you within 24 business hours.
-                </p>
-                <button
-                  onClick={onClose}
-                  className="mt-4 bg-[#292929] text-white text-xs font-semibold uppercase px-6 py-2.5 rounded-full"
-                >
-                  Close
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label className="block text-xs font-medium text-[#555] uppercase tracking-wider mb-1">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Macka Perera"
-                    required
-                    className="w-full bg-white text-sm px-3.5 py-2 rounded-xs border border-[#d8cbbf] focus:outline-none focus:border-[#a88d7f]"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-medium text-[#555] uppercase tracking-wider mb-1">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="you@example.com"
-                    required
-                    className="w-full bg-white text-sm px-3.5 py-2 rounded-xs border border-[#d8cbbf] focus:outline-none focus:border-[#a88d7f]"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-medium text-[#555] uppercase tracking-wider mb-1">
-                    Inquiry Topic
-                  </label>
-                  <select
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                    className="w-full bg-white text-sm px-3.5 py-2 rounded-xs border border-[#d8cbbf] focus:outline-none focus:border-[#a88d7f]"
+                <div className="flex shrink-0 items-center gap-2">
+                  {WHATSAPP[partner.id] && (
+                    <a
+                      href={WHATSAPP[partner.id]}
+                      target="_blank"
+                      rel="noopener"
+                      className="flex items-center gap-1 rounded-full border border-[#d8cbbf] px-3 py-1.5 text-xs text-[#333] hover:border-black"
+                    >
+                      <MessageCircle className="h-3.5 w-3.5" />
+                      WhatsApp
+                    </a>
+                  )}
+                  <a
+                    href={partner.website}
+                    target="_blank"
+                    rel="noopener"
+                    className="flex items-center gap-1 rounded-full bg-[#292929] px-3 py-1.5 text-xs text-white hover:bg-black"
                   >
-                    <option value="Destination Question">Question About the South Coast</option>
-                    <option value="Suggest a Destination">Suggest a Place or Experience</option>
-                    <option value="List Your Business">List Your Down South Business</option>
-                    <option value="Press / Partnership">Press & Partnership Enquiry</option>
-                  </select>
+                    Website
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
                 </div>
-
-                <div>
-                  <label className="block text-xs font-medium text-[#555] uppercase tracking-wider mb-1">
-                    Your Message
-                  </label>
-                  <textarea
-                    rows={4}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Tell us what you need help with..."
-                    required
-                    className="w-full bg-white text-sm px-3.5 py-2 rounded-xs border border-[#d8cbbf] focus:outline-none focus:border-[#a88d7f]"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#c57d71] hover:bg-[#b26e63] text-white text-xs font-semibold tracking-widest uppercase py-3 rounded-full transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
-                >
-                  <Send className="w-3.5 h-3.5" />
-                  <span>SEND MESSAGE</span>
-                </button>
-              </form>
-            )}
-          </div>
+              </li>
+            ))}
+          </ul>
         </motion.div>
       </div>
     </AnimatePresence>

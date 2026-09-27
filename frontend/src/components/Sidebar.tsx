@@ -1,7 +1,7 @@
 import React from 'react';
-import { Search, ChevronDown, ChevronRight, Play, Heart, Instagram } from 'lucide-react';
-import { CategoryType, InstagramPost, PartnerListing } from '../types';
-import { INSTAGRAM_POSTS, PARTNER_LISTINGS } from '../data/partners';
+import { Search, ChevronDown, ChevronRight, ExternalLink } from 'lucide-react';
+import { CategoryType, PartnerListing } from '../types';
+import { PARTNER_LISTINGS } from '../data/partners';
 import { motion } from 'motion/react';
 
 interface SidebarProps {
@@ -12,7 +12,7 @@ interface SidebarProps {
   categories: CategoryType[];
   onOpenTraining: () => void;
   onOpenPartnerPreview: (partner: PartnerListing) => void;
-  onOpenInstagram: (post: InstagramPost) => void;
+  onOpenPartners: () => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -23,9 +23,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
   categories,
   onOpenTraining,
   onOpenPartnerPreview,
-  onOpenInstagram,
+  onOpenPartners,
 }) => {
-  const featuredPartner = PARTNER_LISTINGS.find((p) => p.id === 'mirissa-blue-whale-tours') || PARTNER_LISTINGS[0];
+  const featuredPartner = PARTNER_LISTINGS.find((p) => p.id === 'the-surfer-weligama') || PARTNER_LISTINGS[0];
 
   return (
     <aside
@@ -38,10 +38,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <div className="relative w-44 h-44 mb-3">
           <div className="w-full h-full rounded-full overflow-hidden border-2 border-white shadow-xs">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80"
-              alt="Macka - Editor at Down South Ceylon"
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
+              src={`${import.meta.env.BASE_URL}macka.png`}
+              alt="Macka, editor of Down South Ceylon, working on a laptop in Weligama"
+              className="w-full h-full object-cover object-[60%_30%]"
             />
           </div>
           {/* Cursive overlay */}
@@ -54,7 +53,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         {/* Bio Text */}
         <p className="mt-3 text-[13px] sm:text-[14px] leading-relaxed text-[#505050] font-sans-clean max-w-xs">
-          I'm Macka! If you've come for south coast guides, surf, safari and honest local advice, you're in the right place!
+          I'm Macka, writing from Weligama. If you've come for south coast guides, surf, safari and honest local advice, you're in the right place!
         </p>
       </div>
 
@@ -95,13 +94,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div className="w-full bg-[#35393c] text-white rounded-xs overflow-hidden shadow-sm flex flex-col">
         <div className="p-6 text-center flex flex-col items-center">
           <span className="text-[11px] tracking-[0.25em] text-[#d6d6d6] font-medium uppercase mb-3">
-            FREE DOWNLOAD!
+            START HERE
           </span>
           <h3 className="font-serif-display text-2xl sm:text-[26px] leading-tight font-normal mb-3">
             Plan Your Down South Trip
           </h3>
           <p className="text-[13px] leading-relaxed text-[#dcdcdc] font-light max-w-[240px] mb-5">
-            Get our free south coast guide and build a trip that is not only <span className="font-editorial italic text-base">unhurried</span>, but also <span className="underline decoration-1 underline-offset-2">full of the things you will actually remember!</span>
+            When to come, how long to stay and where to base yourself, so the trip is <span className="font-editorial italic text-base">unhurried</span> and <span className="underline decoration-1 underline-offset-2">full of the things you will actually remember.</span>
           </p>
 
           <button
@@ -109,7 +108,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             onClick={onOpenTraining}
             className="bg-[#d28a80] hover:bg-[#c2796f] text-white text-xs font-semibold tracking-widest uppercase px-6 py-3 rounded-full transition-colors cursor-pointer shadow-xs"
           >
-            GET THE GUIDE
+            READ THE GUIDE
           </button>
         </div>
 
@@ -129,7 +128,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div className="space-y-3">
         <button
           id="sidebar-partners-link"
-          onClick={() => onOpenPartnerPreview(featuredPartner)}
+          onClick={onOpenPartners}
           className="w-full flex items-center justify-between text-xs tracking-wider text-[#555] hover:text-[#111] uppercase font-medium cursor-pointer transition-colors group"
         >
           <span>browse our partners</span>
@@ -144,7 +143,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         >
           <div className="pt-2">
             <span className="font-script text-3xl text-white block transform -rotate-3">
-              Mirissa
+              {featuredPartner.name}
             </span>
           </div>
 
@@ -155,7 +154,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <div className="aspect-[16/10] bg-white rounded-xs overflow-hidden">
                 <img
                   src={featuredPartner.imageUrl}
-                  alt="Mirissa Blue Whale Tours, Sri Lanka"
+                  alt={`${featuredPartner.name}, ${featuredPartner.subtitle}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
@@ -166,69 +165,39 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
       </div>
 
-      {/* 5. Instagram Feed Widget */}
+      {/* 5. Partner Directory */}
       <div className="space-y-3 pt-2">
-        <div className="flex items-center justify-between">
-          <span className="font-serif-display text-sm sm:text-[15px] text-[#333] font-normal lowercase">
-            come hang on insta:
-          </span>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#777] hover:text-[#c57d71] transition-colors"
-            aria-label="Visit Instagram"
-          >
-            <Instagram className="w-4 h-4" />
-          </a>
-        </div>
+        <span className="font-serif-display text-sm sm:text-[15px] text-[#333] font-normal lowercase block">
+          book direct with our partners:
+        </span>
 
-        {/* 2-Column Grid */}
         <div className="grid grid-cols-2 gap-2.5">
-          {INSTAGRAM_POSTS.map((post) => (
-            <motion.div
-              key={post.id}
+          {PARTNER_LISTINGS.map((partner) => (
+            <motion.a
+              key={partner.id}
+              href={partner.website}
+              target="_blank"
+              rel="noopener"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.2 }}
-              id={`insta-item-${post.id}`}
-              onClick={() => onOpenInstagram(post)}
-              className="aspect-square rounded-xs overflow-hidden relative cursor-pointer group shadow-2xs border border-[#e4dad0]"
-              style={{
-                backgroundColor: post.bgColor || '#f0eae4',
-                color: post.textColor || '#222',
-              }}
+              id={`partner-tile-${partner.id}`}
+              className="aspect-square rounded-xs overflow-hidden relative cursor-pointer group shadow-2xs border border-[#e4dad0] block"
             >
-              {post.imageUrl ? (
-                <img
-                  src={post.imageUrl}
-                  alt={post.caption}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  referrerPolicy="no-referrer"
-                  loading="lazy"
-                />
-              ) : post.type === 'pattern' ? (
-                <div className="w-full h-full p-2 flex flex-col justify-center items-center text-center text-[9px] font-mono leading-tight tracking-tighter opacity-80 select-none">
-                  <div>down south</div>
-                  <div>down south</div>
-                  <div>down south</div>
-                  <div>down south</div>
-                  <div>down south</div>
-                  <div>down south</div>
-                </div>
-              ) : (
-                <div className="w-full h-full p-3 flex flex-col justify-center items-center text-center">
-                  <p className="text-[10px] leading-tight font-medium line-clamp-4">
-                    {post.quote || post.caption}
-                  </p>
-                </div>
-              )}
-
-              {/* Hover overlay with heart likes count */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1">
-                <Heart className="w-3.5 h-3.5 fill-white" />
-                <span>{post.likes}</span>
+              <img
+                src={partner.imageUrl}
+                alt={`${partner.name}, ${partner.subtitle}`}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                referrerPolicy="no-referrer"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex flex-col justify-end p-2">
+                <span className="text-white text-[11px] font-semibold leading-tight">{partner.name}</span>
+                <span className="text-white/80 text-[9px] leading-tight flex items-center gap-1">
+                  {new URL(partner.website).hostname.replace(/^www\./, '')}
+                  <ExternalLink className="w-2.5 h-2.5" />
+                </span>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
